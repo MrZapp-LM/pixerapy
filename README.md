@@ -1,71 +1,66 @@
-# Pixera Python API
-## PixeraPy
+# PixeraPy
 
-Made by Ted Charles Brown<br>
+Python client for the [AV Stumpfl PIXERA](https://pixera.one) JSON API.
 
-`pip install PixeraPy`
+`NOT AN OFFICIAL PIXERA PROJECT`
 
-### Usage
+- Covers **API revision 481 (PIXERA 26.1 R39)**: 881 functions and class methods, generated from the official API description, with Pixera's own comments as docstrings.
+- Drop-in compatible with PixeraPy 0.381 / 0.461 by Ted Charles Brown: same `Pixera` and `API` classes, same call style.
+- No dependencies. Works with JSON/TCP, JSON/TCP (dl) and HTTP access points.
+- Persistent connections and monitoring events.
 
-#### API Access point PIXERA setup
-JSON/TCP is used by PixeraPy and must also be set as an API access point in PIXERA.
+This is a continuation of [PixeraPy by Ted Charles Brown](https://github.com/Tedcharlesbrown/Pixera-TCB/tree/main/01-Custom/03-API). The published `PixeraPy 0.461.1` on PyPI still contains the revision 381 functions (PIXERA 2.0.40); this fork brings it to the current API.
 
-#### Via PyPi (Recommended)
+## Install
+
 ```
-from PixeraPy import Pixera, API
-ip = "127.0.0.1"  # Replace with your Pixera system's IP address
-port = 1400  # Replace with your Pixera system's port if different
-
-pixera = Pixera(ip, port)
-api = API()
+pip install git+https://github.com/MrZapp-LM/pixerapy
 ```
 
+The import name is still `PixeraPy`, so uninstall the old package first (`pip uninstall PixeraPy`) to avoid the two shadowing each other.
 
-#### Manual Downlaod
-- [Download PixeraPy](01-Custom/03-API/PixeraPy) directly and place into your working directory
+## Pixera setup
 
-#### Examples
-```
-from time import sleep
-# ----------------------------- DEFAULT DEBUGGING ---------------------------- #
-output = pixera.send()
-print(output)
-sleep(1)
-# ----------------------------- VERBOSE DEBUGGING ---------------------------- #
-output = pixera.send(api.outputDebug("Hello from Python!"), verbose=True)
-print(output)
-sleep(1)
-# ---------------------------- CHANGING API METHOD --------------------------- #
-output = pixera.send(api.getApiRevision(), protocol="TCP_DL", port=1401, verbose=True)
-print(output)
-sleep(1)
-# ------------------------- ACCESSING CONTROL MODULES ------------------------ #
-output = pixera.send(["NewModule.Test"])
-print(output)
-sleep(1)
-# ---------------------------- MULTIPLE PARAMETERS --------------------------- #
-pixera.send(api.setTransportModeOnTimeline("Timeline 1", 1))
-sleep(1)
-pixera.send(api.setTransportModeOnTimeline("Timeline 1", 0))
-sleep(1)
-# ----------------------------- HANDLING HANDLES ----------------------------- #
-screens = pixera.return_array(pixera.send(api.getScreens()))
-for screen in screens:
-    output = pixera.send(api.Screen().getName(int(screen)), verbose=True)
-    print(output)
-    sleep(1)
+In Pixera open **Settings > API** and add an access point, e.g. **JSON/TCP** on port **1400**. Allow the port in the firewall of the Pixera machine if you connect from another computer.
 
+## Quick start
 
-# ------------------------------- MANUAL INPUT ------------------------------- #
-output = pixera.send(["Pixera.Utility.outputDebug", ["message"], ["Hello from Python!"]], verbose=True)
-print(output)
+```python
+from PixeraPy import API, Pixera
+
+pixera = Pixera("127.0.0.1", 1400)
+
+print(pixera.send(API.Utility.getApiRevision()))          # 481
+
+for screen in pixera.send(API.Screens.getScreens()):       # list of handles
+    print(pixera.send(API.Screens.Screen.getName(screen)))
+
+timeline = pixera.send(API.Timelines.getTimelineFromName("Timeline 1"))
+pixera.send(API.Timelines.Timeline.play(timeline))
+pixera.send(API.Timelines.Timeline.applyCueWithNumberString(timeline, "2.1"))
 ```
 
+Every API function only *builds* a request (`[method, param_names, values]`); `pixera.send(...)` sends it and returns the `result` of the reply. Class methods (Screen, Timeline, Layer, Cue, ...) take the object handle as first argument.
 
-#### Update Log
+Old style calls keep working: `API.getScreens()`, `API.Screen.getName(handle)`, `api = API(); api.getScreens()`.
+
+## Documentation
+
+- [Getting started](docs/getting-started.md): connection, protocols, handles, optional parameters, errors
+- [Monitoring](docs/monitoring.md): persistent connections, polling and event mode
+- [API reference](docs/api-reference.md): every function of revision 481 (generated)
+- [Updating to a new Pixera version](docs/updating-the-api.md): regenerate from a new API description
+- [Changelog](CHANGELOG.md)
+
+## Development
+
 ```
-v0.381.3 - Fixes error where default IP was not changing
-v0.381.2 - Revised the parsing of incoming data, offers option for raw output
-v0.381.1 - Pixera API revision 381 (Pixera 2.0.40)
-v0.367.2 - Pixera API revision 367
+pip install -e . pytest
+pytest
 ```
+
+The tests run against a small fake Pixera server, no Pixera installation needed.
+
+## License
+
+MIT. Original work © 2023 Ted Charles Brown, continued © 2026 MrZapp-LM.

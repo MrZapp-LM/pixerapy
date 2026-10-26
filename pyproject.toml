@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pixera-python"
+dynamic = ["version"]
+description = "Python client for the AV Stumpfl PIXERA JSON API (API revision 481, PIXERA 26.1)"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Ted Charles Brown", email = "tedcharlesbrown@gmail.com" },
+    { name = "MrZapp-LM" },
+]
+requires-python = ">=3.8"
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Video",
+]
+
+[project.urls]
+Source = "https://github.com/MrZapp-LM/pixerapy"
+Original = "https://github.com/Tedcharlesbrown/Pixera-TCB"
+
+[tool.setuptools.dynamic]
+version = { attr = "PixeraPy.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
