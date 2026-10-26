@@ -39,6 +39,8 @@ class MockTcpServer:
         data = json.dumps(obj).encode()
         if self.framing == "pxr1":
             return b"pxr1" + struct.pack("<I", len(data)) + data
+        if self.framing == "bare":
+            return data
         return data + b"0xPX"
 
     def _serve(self):
@@ -59,7 +61,7 @@ class MockTcpServer:
                     return
                 buffer += data
                 while True:
-                    if self.framing == "pxr1":
+                    if self.framing in ("pxr1", "bare"):
                         if len(buffer) < 8:
                             break
                         assert buffer[:4] == b"pxr1"

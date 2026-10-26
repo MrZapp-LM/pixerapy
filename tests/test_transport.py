@@ -99,3 +99,12 @@ def test_return_array():
     pixera = Pixera()
     assert pixera.return_array([1, 2]) == ["1", "2"]
     assert pixera.return_array("[1, 2]") == ["1", "2"]
+
+
+def test_reply_without_pxr1_header_is_accepted():
+    """In case Pixera answers JSON/TCP requests without the size header."""
+    server = MockTcpServer(framing="bare", events_before_reply=1)
+    with Pixera("127.0.0.1", server.port) as pixera:
+        assert pixera.send(API.outputDebug("ü {}")) == "ü {}"
+        assert len(json.loads(pixera.send(API.getLicenseJson()))) == 5000
+        assert len(pixera.poll_events()) == 2

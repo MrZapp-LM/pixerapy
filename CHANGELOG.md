@@ -32,6 +32,8 @@ package still contained the API functions of revision 381 (PIXERA 2.0.40).
   closed connection made the client loop forever.
 - Functions without return value no longer raise `KeyError`; they return `None`.
 - JSON-RPC errors raise `PixeraError`.
+- Replies without `pxr1` header are accepted as well (plain JSON).
+- `examples/smoke_test.py`: read-only checks against a running Pixera.
 - Persistent connections (`keep_alive=True` / `with Pixera(...)`), required for monitoring.
 - Monitoring events: `poll_events()`.
 - `send(port=...)` no longer changes the client's port permanently.

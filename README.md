@@ -44,6 +44,12 @@ Every API function only *builds* a request (`[method, param_names, values]`); `p
 
 Old style calls keep working: `API.getScreens()`, `API.Screen.getName(handle)`, `api = API(); api.getScreens()`.
 
+## Check against your Pixera
+
+`python examples/smoke_test.py <ip> <port>` runs read-only checks against a running Pixera
+(connection, replies, errors, monitoring, and whether Pixera knows every function of the library)
+and prints OK / FEHLER per check.
+
 ## Documentation
 
 - [Getting started](docs/getting-started.md): connection, protocols, handles, optional parameters, errors

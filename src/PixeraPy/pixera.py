@@ -41,6 +41,7 @@ class _Connection:
         self.sock = socket.create_connection((ip_address, port), timeout=timeout)
         self.sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
         self.buffer = b""
+        self._decoder = json.JSONDecoder()
 
     def close(self):
         try:
@@ -66,7 +67,7 @@ class _Connection:
             if len(self.buffer) < 8:
                 return None
             if self.buffer[:4] != self.TAG:
-                raise ConnectionError(f"Unexpected data from Pixera (missing pxr1 header): {self.buffer[:32]!r}")
+                return self._take_bare_json()
             size = struct.unpack("<I", self.buffer[4:8])[0]
             if len(self.buffer) < 8 + size:
                 return None
@@ -76,6 +77,22 @@ class _Connection:
         if index == -1:
             return None
         message, self.buffer = self.buffer[:index], self.buffer[index + len(self.DELIMITER):]
+        return message
+
+    def _take_bare_json(self) -> Optional[bytes]:
+        """Fallback for replies sent without pxr1 header: take one complete JSON value."""
+        text = self.buffer.lstrip()
+        if not text:
+            self.buffer = b""
+            return None
+        if text[:1] not in (b"{", b"["):
+            raise ConnectionError(f"Unexpected data from Pixera: {self.buffer[:32]!r}")
+        try:
+            _, end = self._decoder.raw_decode(text.decode("utf-8"))
+        except (ValueError, UnicodeDecodeError):
+            return None  # incomplete, wait for more data
+        consumed = len(text.decode("utf-8")[:end].encode("utf-8"))
+        message, self.buffer = text[:consumed], text[consumed:]
         return message
 
     def read(self) -> bytes:
