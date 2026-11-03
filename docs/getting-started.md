@@ -96,7 +96,8 @@ pixera.send(API.Screens.Screen.setPosition(screen, zPos=2.5))               # on
 ### Return values
 
 `send()` returns the `result` of the JSON-RPC reply: numbers, strings, lists, dicts (for structs
-such as `ScreenPosValues` -> `{"x": .., "y": .., "z": ..}`), or `None` for functions without result.
+such as `ScreenPosValues` -> `{"x": .., "y": .., "z": ..}`). Functions without return value give
+`None` if Pixera sends no result; PIXERA 26.1 sends `1` for them (see [known issues](known-issues.md)).
 Each function's docstring ends with the Pixera signature and the type Pixera returns.
 
 `send(..., raw_output=True)` returns the full reply dict, `verbose=True` prints request and reply.
@@ -105,6 +106,10 @@ Each function's docstring ends with the Pixera signature and the type Pixera ret
 
 If Pixera answers with a JSON-RPC error, `send()` raises `PixeraError` (`.code`, `.message`,
 `.request`). Network problems raise the usual `OSError` / `ConnectionError` / `socket.timeout`.
+
+PIXERA 26.1 does not answer calls to unknown methods with an error, so a typo in a method name
+goes unnoticed. `pixera.has_function("Pixera.Timelines.Timeline.play")` asks Pixera whether a
+function exists.
 
 ```python
 from PixeraPy import PixeraError

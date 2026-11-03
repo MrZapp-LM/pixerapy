@@ -295,6 +295,13 @@ class Pixera:
         except urllib.error.HTTPError as error:
             raise ConnectionError(f"HTTP {error.code} from Pixera: {error.read()[:200]!r}") from error
 
+    def has_function(self, name: str) -> bool:
+        """Ask Pixera whether it knows a function, e.g. "Pixera.Timelines.Timeline.play".
+
+        Pixera 26.1 does not answer unknown methods with an error, so use this to check first.
+        """
+        return bool(self.send(["Pixera.Utility.getHasFunction", ["functionName"], [name]]))
+
     # ---------------------------------- monitoring ---------------------------------- #
 
     def poll_events(self, timeout: float = 0) -> List[dict]:

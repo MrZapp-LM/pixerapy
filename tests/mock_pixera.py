@@ -17,6 +17,9 @@ def handle_request(request):
     if method == "Pixera.Utility.getLicenseJson":
         # Large reply whose chunks may well end in "}" before the message is complete.
         return {"jsonrpc": "2.0", "id": request["id"], "result": json.dumps([{"k": i} for i in range(5000)])}
+    if method == "Pixera.Utility.getHasFunction":
+        return {"jsonrpc": "2.0", "id": request["id"], "result": params["functionName"].startswith("Pixera.Utility.")
+                and params["functionName"] != "Pixera.Utility.doesNotExist"}
     if method == "Pixera.Compound.startFirstTimeline":
         return {"jsonrpc": "2.0", "id": request["id"]}
     return {"jsonrpc": "2.0", "id": request["id"], "error": {"code": -32601, "message": "Method not found"}}
