@@ -116,3 +116,11 @@ def test_has_function():
     assert pixera.has_function("Pixera.Utility.noop") is True
     assert pixera.has_function("Pixera.Utility.doesNotExist") is False
     assert server.requests[-1]["params"] == {"functionName": "Pixera.Utility.doesNotExist"}
+
+
+def test_pixera_exception_result_raises(server_and_protocol):
+    server, protocol = server_and_protocol
+    with pytest.raises(PixeraError) as info:
+        Pixera("127.0.0.1", server.port, protocol=protocol).send(["Pixera.Utility.doesNotExist"])
+    assert info.value.code == 125
+    assert info.value.data == {"_pixc": {"type": 125, "typeName": "Exception"}}

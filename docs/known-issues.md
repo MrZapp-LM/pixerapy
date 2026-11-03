@@ -1,6 +1,6 @@
 # Known issues with PIXERA 26.1 R39 (API revision 481)
 
-Found with `examples/smoke_test.py` against a real PIXERA 26.1 R39 on 2026-11-03.
+Found with `examples/smoke_test.py` against a real PIXERA 26.1 R39 on 2026-11-03 (two runs).
 
 ## Functions without return value reply with `1`
 
@@ -13,13 +13,19 @@ Do not rely on the return value of functions documented as returning nothing.
 event mode `"none"`). The documentation describes an array of subjects; expect `1` when there
 is nothing to report.
 
-## Unknown functions do not raise an error
+## Errors come as a typed result, not as a JSON-RPC error
 
-Calling a method that does not exist (`Pixera.Utility.doesNotExist`) gets no JSON-RPC error
-reply, so `send()` does not raise `PixeraError`. Typos in method names therefore fail silently.
-Check with `pixera.has_function("Pixera.Timelines.Timeline.play")` (uses
-`Pixera.Utility.getHasFunction`) when in doubt. `PixeraError` is still raised whenever Pixera
-does send an error object.
+Calling a method that does not exist (`Pixera.Utility.doesNotExist`) gets no JSON-RPC `error`
+object. Pixera sends a normal reply whose result marks an exception:
+
+```json
+{"id": 5, "jsonrpc": "2.0", "result": {"_pixc": {"type": 125, "typeName": "Exception"}}}
+```
+
+Since 0.481.2 `send()` recognises this and raises `PixeraError` (`code` 125, the full result in
+`.data`). The reply carries no message, so the error does not say what went wrong.
+`pixera.has_function(name)` (uses `Pixera.Utility.getHasFunction`) checks beforehand whether a
+method exists.
 
 ## MultiUserMember methods reported as unknown
 

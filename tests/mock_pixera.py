@@ -22,6 +22,9 @@ def handle_request(request):
                 and params["functionName"] != "Pixera.Utility.doesNotExist"}
     if method == "Pixera.Compound.startFirstTimeline":
         return {"jsonrpc": "2.0", "id": request["id"]}
+    if method == "Pixera.Utility.doesNotExist":
+        # What PIXERA 26.1 R39 actually sends for unknown methods.
+        return {"jsonrpc": "2.0", "id": request["id"], "result": {"_pixc": {"type": 125, "typeName": "Exception"}}}
     return {"jsonrpc": "2.0", "id": request["id"], "error": {"code": -32601, "message": "Method not found"}}
 
 
