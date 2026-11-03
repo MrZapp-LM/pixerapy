@@ -37,11 +37,16 @@ although the rev481 description lists them (and rev381 did already):
 `resetCumulativePerformanceMonitoringValues`, `resetEngine`, `restartEngine`, `shutDown`,
 `startEngine`, `triggerBackup`, `wakeUp`.
 
-Only `getName`, `getIp` and `getInst` are reported as available. The functions stay in the library
-because they are part of the official description. Whether they work when called directly is not
-yet known (the test project had no multi-user members; the smoke test calls `getName`, `getState`
-and `getMacAddress` on the first member when one exists). The equivalent methods on
-`LiveSystems.LiveSystem` are reported as available.
+Only `getName`, `getIp` and `getInst` are reported as available.
+
+Called directly on a real multi-user member (test run on 2026-11-03), `getName` works
+(`"Office-Workstation-2"`), while `getState` and `getMacAddress` answer with the exception result
+(`{"_pixc": {"type": 125, "typeName": "Exception"}}`, raised as `PixeraError` since 0.481.2).
+So on PIXERA 26.1 R39 the 14 methods reported as unknown are most likely documented but not
+implemented for multi-user members (two of them confirmed).
+The functions stay in the library because they are part of the official description and may work
+in later Pixera versions. Use the equivalent `LiveSystems.LiveSystem` methods for live systems;
+those are reported as available.
 
 All other functions of the library are reported as available (Ui and WebViews were not checked,
 they are only available to plugins hosted inside Pixera).

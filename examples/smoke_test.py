@@ -143,11 +143,14 @@ def main():
         if not members:
             return "übersprungen, keine Multi-User-Mitglieder"
         member = members[0]
-        return {
-            "getName": pixera.send(API.LiveSystems.MultiUserMember.getName(member), raw_output=True),
-            "getState": pixera.send(API.LiveSystems.MultiUserMember.getState(member), raw_output=True),
-            "getMacAddress": pixera.send(API.LiveSystems.MultiUserMember.getMacAddress(member), raw_output=True),
-        }
+        results = {}
+        for name in ("getName", "getIp", "getState", "getMacAddress"):
+            try:
+                results[name] = pixera.send(getattr(API.LiveSystems.MultiUserMember, name)(member))
+            except PixeraError as error:
+                # getState and getMacAddress fail on PIXERA 26.1 R39, see docs/known-issues.md
+                results[name] = f"PixeraError {error.code}"
+        return results
     check("MultiUserMember direkt aufrufen", multi_user_member)
 
     def has_functions():
