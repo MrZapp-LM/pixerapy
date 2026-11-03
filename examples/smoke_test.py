@@ -12,7 +12,7 @@ import inspect
 import json
 import time
 
-from PixeraPy import API, API_REVISION, Pixera
+from PixeraPy import API, API_REVISION, Pixera, PixeraError
 
 results = []
 
@@ -80,10 +80,12 @@ def main():
     check("Funktion ohne Rückgabewert (noop)", noop)
 
     def unknown():
-        # Pixera 26.1 R39 does not report unknown methods as errors; getHasFunction is the reliable check.
         assert pixera.has_function("Pixera.Utility.doesNotExist") is False, "getHasFunction meldet die Funktion als vorhanden"
-        reply = pixera.send(["Pixera.Utility.doesNotExist"], raw_output=True)
-        return f"getHasFunction -> False; direkte Antwort: {json.dumps(reply)}"
+        try:
+            reply = pixera.send(["Pixera.Utility.doesNotExist"])
+        except PixeraError as error:
+            return f"getHasFunction -> False; PixeraError {error.code}"
+        raise AssertionError(f"kein Fehler, Antwort: {reply!r}")
     check("Unbekannte Funktion", unknown)
 
     def large():
@@ -141,11 +143,14 @@ def main():
         if not members:
             return "übersprungen, keine Multi-User-Mitglieder"
         member = members[0]
-        return {
-            "getName": pixera.send(API.LiveSystems.MultiUserMember.getName(member), raw_output=True),
-            "getState": pixera.send(API.LiveSystems.MultiUserMember.getState(member), raw_output=True),
-            "getMacAddress": pixera.send(API.LiveSystems.MultiUserMember.getMacAddress(member), raw_output=True),
-        }
+        results = {}
+        for name in ("getName", "getIp", "getState", "getMacAddress"):
+            try:
+                results[name] = pixera.send(getattr(API.LiveSystems.MultiUserMember, name)(member))
+            except PixeraError as error:
+                # getState and getMacAddress fail on PIXERA 26.1 R39, see docs/known-issues.md
+                results[name] = f"PixeraError {error.code}"
+        return results
     check("MultiUserMember direkt aufrufen", multi_user_member)
 
     def has_functions():

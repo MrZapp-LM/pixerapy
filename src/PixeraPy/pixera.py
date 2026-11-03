@@ -243,7 +243,14 @@ class Pixera:
             return reply
         if "error" in reply:
             raise PixeraError(reply["error"], request)
-        return reply.get("result")
+        result = reply.get("result")
+        # PIXERA 26.1 reports failures (e.g. unknown methods) as a typed result instead of a
+        # JSON-RPC error: {"result": {"_pixc": {"type": 125, "typeName": "Exception"}}}
+        if isinstance(result, dict) and isinstance(result.get("_pixc"), dict):
+            info = result["_pixc"]
+            if info.get("typeName") == "Exception":
+                raise PixeraError({"code": info.get("type"), "message": "Pixera exception", "data": result}, request)
+        return result
 
     @staticmethod
     def _direct_method(method: str) -> str:
@@ -296,10 +303,7 @@ class Pixera:
             raise ConnectionError(f"HTTP {error.code} from Pixera: {error.read()[:200]!r}") from error
 
     def has_function(self, name: str) -> bool:
-        """Ask Pixera whether it knows a function, e.g. "Pixera.Timelines.Timeline.play".
-
-        Pixera 26.1 does not answer unknown methods with an error, so use this to check first.
-        """
+        """Ask Pixera whether it knows a function, e.g. "Pixera.Timelines.Timeline.play"."""
         return bool(self.send(["Pixera.Utility.getHasFunction", ["functionName"], [name]]))
 
     # ---------------------------------- monitoring ---------------------------------- #

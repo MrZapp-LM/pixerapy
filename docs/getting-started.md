@@ -107,9 +107,10 @@ Each function's docstring ends with the Pixera signature and the type Pixera ret
 If Pixera answers with a JSON-RPC error, `send()` raises `PixeraError` (`.code`, `.message`,
 `.request`). Network problems raise the usual `OSError` / `ConnectionError` / `socket.timeout`.
 
-PIXERA 26.1 does not answer calls to unknown methods with an error, so a typo in a method name
-goes unnoticed. `pixera.has_function("Pixera.Timelines.Timeline.play")` asks Pixera whether a
-function exists.
+PIXERA 26.1 reports some failures, e.g. calls to unknown methods, as a result
+`{"_pixc": {"type": 125, "typeName": "Exception"}}` instead of a JSON-RPC error; `send()` raises
+`PixeraError` for these too (see [known issues](known-issues.md)). The reply does not say what
+went wrong, so `pixera.has_function("Pixera.Timelines.Timeline.play")` helps to rule out typos.
 
 ```python
 from PixeraPy import PixeraError

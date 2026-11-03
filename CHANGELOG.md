@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.481.2 (2026-11-03)
+
+- PIXERA 26.1 reports errors such as unknown methods as a result
+  `{"_pixc": {"type": 125, "typeName": "Exception"}}` instead of a JSON-RPC error (found in the
+  raw replies of the second smoke test run). `send()` now raises `PixeraError` for it.
+- Smoke test expects that `PixeraError` again for unknown methods, and reports MultiUserMember
+  calls one by one (`getState`/`getMacAddress` fail on PIXERA 26.1 R39).
+- Known issues: MultiUserMember `getState` and `getMacAddress` confirmed not working on 26.1 R39.
+
 ## 0.481.1 (2026-11-03)
 
 Findings from the first run of `examples/smoke_test.py` against a real PIXERA 26.1 R39, see

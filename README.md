@@ -55,7 +55,7 @@ and prints OK / FEHLER per check.
 - [Getting started](docs/getting-started.md): connection, protocols, handles, optional parameters, errors
 - [Monitoring](docs/monitoring.md): persistent connections, polling and event mode
 - [API reference](docs/api-reference.md): every function of revision 481 (generated)
-- [Known issues with PIXERA 26.1](docs/known-issues.md): `1` instead of no result, no error for unknown methods, MultiUserMember
+- [Known issues with PIXERA 26.1](docs/known-issues.md): `1` instead of no result, errors as typed results, MultiUserMember
 - [Updating to a new Pixera version](docs/updating-the-api.md): regenerate from a new API description
 - [Changelog](CHANGELOG.md)
 
