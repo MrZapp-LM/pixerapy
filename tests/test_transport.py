@@ -108,3 +108,11 @@ def test_reply_without_pxr1_header_is_accepted():
         assert pixera.send(API.outputDebug("ü {}")) == "ü {}"
         assert len(json.loads(pixera.send(API.getLicenseJson()))) == 5000
         assert len(pixera.poll_events()) == 2
+
+
+def test_has_function():
+    server = MockTcpServer()
+    pixera = Pixera("127.0.0.1", server.port)
+    assert pixera.has_function("Pixera.Utility.noop") is True
+    assert pixera.has_function("Pixera.Utility.doesNotExist") is False
+    assert server.requests[-1]["params"] == {"functionName": "Pixera.Utility.doesNotExist"}

@@ -12,9 +12,20 @@ import inspect
 import json
 import time
 
-from PixeraPy import API, API_REVISION, Pixera, PixeraError
+from PixeraPy import API, API_REVISION, Pixera
 
 results = []
+
+# Documented in rev481 but reported as unknown by getHasFunction on PIXERA 26.1 R39 (see docs/known-issues.md).
+KNOWN_UNREPORTED = {
+    f"Pixera.LiveSystems.MultiUserMember.{name}"
+    for name in (
+        "closeEngine", "ensureFileDistribution", "getMacAddress", "getPerformanceMonitoringValuesJson",
+        "getPerformanceMonitoringValuesJsonEx", "getState", "getStructureJson",
+        "resetCumulativePerformanceMonitoringValues", "resetEngine", "restartEngine", "shutDown",
+        "startEngine", "triggerBackup", "wakeUp",
+    )
+}
 
 
 def check(name, func):
@@ -62,17 +73,18 @@ def main():
     check("API-Revision", revision)
 
     def noop():
-        result = pixera.send(API.Utility.noop())
-        assert result is None, f"erwartet None, bekommen {result!r}"
+        # Pixera 26.1 R39 answers with result 1 instead of leaving result out; both are fine.
+        reply = pixera.send(API.Utility.noop(), raw_output=True)
+        assert "error" not in reply, f"Fehler von Pixera: {reply}"
+        return f"Antwort: {json.dumps(reply)}"
     check("Funktion ohne Rückgabewert (noop)", noop)
 
     def unknown():
-        try:
-            pixera.send(["Pixera.Utility.doesNotExist"])
-        except PixeraError as error:
-            return f"PixeraError {error.code}"
-        raise AssertionError("kein Fehler von Pixera")
-    check("Fehlerbehandlung (unbekannte Funktion)", unknown)
+        # Pixera 26.1 R39 does not report unknown methods as errors; getHasFunction is the reliable check.
+        assert pixera.has_function("Pixera.Utility.doesNotExist") is False, "getHasFunction meldet die Funktion als vorhanden"
+        reply = pixera.send(["Pixera.Utility.doesNotExist"], raw_output=True)
+        return f"getHasFunction -> False; direkte Antwort: {json.dumps(reply)}"
+    check("Unbekannte Funktion", unknown)
 
     def large():
         return f"{len(pixera.send(API.Utility.getLicenseJson()))} Zeichen"
@@ -118,11 +130,23 @@ def main():
     def monitoring():
         with Pixera(args.ip, args.port, timeout=5) as client:
             client.send(API.Utility.setMonitoringEventMode("none"))
-            polled = client.send(API.Utility.pollMonitoring())
+            polled = client.send(API.Utility.pollMonitoring(), raw_output=True)
             client.send(API.Utility.setMonitoringEventMode("all"))
             events = client.poll_events(timeout=2.0)
-            return f"pollMonitoring -> {json.dumps(polled)[:120]}; {len(events)} Events in 2 s (0 ist ok, wenn nichts läuft)"
+            return f"pollMonitoring -> {json.dumps(polled)[:200]}; {len(events)} Events in 2 s (0 ist ok, wenn nichts läuft)"
     check("Monitoring", monitoring)
+
+    def multi_user_member():
+        members = pixera.send(API.LiveSystems.getMultiUserMembers())
+        if not members:
+            return "übersprungen, keine Multi-User-Mitglieder"
+        member = members[0]
+        return {
+            "getName": pixera.send(API.LiveSystems.MultiUserMember.getName(member), raw_output=True),
+            "getState": pixera.send(API.LiveSystems.MultiUserMember.getState(member), raw_output=True),
+            "getMacAddress": pixera.send(API.LiveSystems.MultiUserMember.getMacAddress(member), raw_output=True),
+        }
+    check("MultiUserMember direkt aufrufen", multi_user_member)
 
     def has_functions():
         names = sorted(set(all_methods()))
@@ -133,6 +157,10 @@ def main():
                     missing.append(name)
         # Ui and WebViews are only available to plugins hosted inside Pixera.
         missing = [name for name in missing if not name.startswith(("Pixera.Ui.", "Pixera.WebViews."))]
+        known = [name for name in missing if name in KNOWN_UNREPORTED]
+        missing = [name for name in missing if name not in KNOWN_UNREPORTED]
+        if known:
+            print(f"        Hinweis: {len(known)} MultiUserMember-Methoden meldet Pixera 26.1 R39 als unbekannt (bekannt, siehe docs/known-issues.md)")
         if missing:
             raise AssertionError(f"{len(missing)} von {len(names)} Funktionen kennt Pixera nicht: {missing[:20]}")
         return f"alle {len(names)} Funktionen bekannt (Ui/WebViews nicht geprüft)"

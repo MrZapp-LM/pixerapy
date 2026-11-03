@@ -248,7 +248,10 @@ class Generator:
         if doc:
             doc.append("")
         doc.append(f"API: {func.returns} {qualified}({', '.join(f'{p.type} {p.name}' for p in func.params)})")
-        doc.append(f"Pixera returns: {returns}")
+        if returns == "None":
+            doc.append("Pixera returns: no value (PIXERA 26.1 replies with result 1)")
+        else:
+            doc.append(f"Pixera returns: {returns}")
 
         names = ", ".join(f'"{p.name}"' for p in params)
         values = ", ".join(py_name(p.name) for p in params)

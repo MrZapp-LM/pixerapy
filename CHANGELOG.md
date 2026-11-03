@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.481.1 (2026-11-03)
+
+Findings from the first run of `examples/smoke_test.py` against a real PIXERA 26.1 R39, see
+[docs/known-issues.md](docs/known-issues.md).
+
+- New `Pixera.has_function(name)`, because PIXERA 26.1 does not report unknown methods as errors.
+- Smoke test: accepts `1` as reply of functions without return value, checks unknown methods via
+  `getHasFunction`, records raw replies, calls MultiUserMember methods directly when a member
+  exists, lists the 14 MultiUserMember methods Pixera reports as unknown as a known issue.
+- Docs: known issues page; docstrings of functions without return value mention the `1` reply.
+
 ## 0.481.0 (2026-10-26)
 
 First release of this fork. Based on PixeraPy 0.461.1 by Ted Charles Brown, whose published

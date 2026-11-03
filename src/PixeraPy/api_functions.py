@@ -136,7 +136,7 @@ class API:
             to know that the last invocation in the set has been processed by Pixera.
 
             API: null Pixera.Utility.noop()
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Utility.noop", [], [], ())
 
@@ -146,7 +146,7 @@ class API:
             Experimental. Currently only relevant to Javascript interpretation within Pixera.
 
             API: null Pixera.Utility.requestCallback(string functionName)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Utility.requestCallback", ["functionName"], [functionName], ())
 
@@ -162,7 +162,7 @@ class API:
         def writeFileString(path: str, fileStr: str) -> list:
             """
             API: null Pixera.Utility.writeFileString(string path, string fileStr)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Utility.writeFileString", ["path", "fileStr"], [path, fileStr], ())
 
@@ -216,7 +216,7 @@ class API:
             In the Control implementation this function is called when monitoring events are sent.
 
             API: null Pixera.Utility.monitoringEvent(string eventDescription)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Utility.monitoringEvent", ["eventDescription"], [eventDescription], ())
 
@@ -252,7 +252,7 @@ class API:
         def dynamicRebuildFromJsonDescription(deviceName: str, jsonDescription: str, folder: str) -> list:
             """
             API: null Pixera.Utility.dynamicRebuildFromJsonDescription(string deviceName, string jsonDescription, string folder)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Utility.dynamicRebuildFromJsonDescription", ["deviceName", "jsonDescription", "folder"], [deviceName, jsonDescription, folder], ())
 
@@ -260,7 +260,7 @@ class API:
         def resetSelectiveRenderingFrameCounters() -> list:
             """
             API: null Pixera.Utility.resetSelectiveRenderingFrameCounters()
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Utility.resetSelectiveRenderingFrameCounters", [], [], ())
 
@@ -286,7 +286,7 @@ class API:
             def sendString(handle: handle, str: str) -> list:
                 """
                 API: null Pixera.Network.Conveyor.sendString(string str)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Network.Conveyor.sendString", ["handle", "str"], [handle, str], ())
 
@@ -325,7 +325,7 @@ class API:
             Mode Parameter: Play = 1, Pause = 2, Stop = 3.
 
             API: null Pixera.Compound.setTransportModeOnTimeline(string timelineName, int mode)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.setTransportModeOnTimeline", ["timelineName", "mode"], [timelineName, mode], ())
 
@@ -336,7 +336,7 @@ class API:
             Mode toggles between Play and Pause.
 
             API: null Pixera.Compound.toggleTransport(string timelineName)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.toggleTransport", ["timelineName"], [timelineName], ())
 
@@ -358,7 +358,7 @@ class API:
             in the timeline library of the Compositing tab to Play.
 
             API: null Pixera.Compound.startFirstTimeline()
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.startFirstTimeline", [], [], ())
 
@@ -369,7 +369,7 @@ class API:
             in the timeline library of the Compositing tab to Pause.
 
             API: null Pixera.Compound.pauseFirstTimeline()
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.pauseFirstTimeline", [], [], ())
 
@@ -380,7 +380,7 @@ class API:
             in the timeline library of the Compositing tab to Stop.
 
             API: null Pixera.Compound.stopFirstTimeline()
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.stopFirstTimeline", [], [], ())
 
@@ -392,7 +392,7 @@ class API:
             opacity: opacity value between 0.0 and 1.0
 
             API: null Pixera.Compound.setOpacityOnTimeline(string timelineName, double opacity)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.setOpacityOnTimeline", ["timelineName", "opacity"], [timelineName, opacity], ())
 
@@ -413,7 +413,7 @@ class API:
             Purely for demonstration, testing purposes.
 
             API: null Pixera.Compound.setPosValue(double val)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.setPosValue", ["val"], [val], ())
 
@@ -424,7 +424,7 @@ class API:
             Purely for demonstration, testing purposes.
 
             API: null Pixera.Compound.setPosValueXY(double valX, double valY)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.setPosValueXY", ["valX", "valY"], [valX, valY], ())
 
@@ -435,7 +435,7 @@ class API:
             The parameter is identified by a path separated by periods (e.g. "Timeline 1.Layer 1.Opacity").
 
             API: null Pixera.Compound.setParamValue(string path, double value)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.setParamValue", ["path", "value"], [path, value], ())
 
@@ -449,7 +449,7 @@ class API:
             blendDuration: optional parameter to set blend duration in seconds.
 
             API: null Pixera.Compound.applyCueAtIndexOnTimelineAtIndex(int cueIndex, int timelineIndex, optional<double> blendDuration)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.applyCueAtIndexOnTimelineAtIndex", ["cueIndex", "timelineIndex", "blendDuration"], [cueIndex, timelineIndex, blendDuration], ("blendDuration",))
 
@@ -463,7 +463,7 @@ class API:
             blendDuration: optional parameter to set blend duration in seconds.
 
             API: null Pixera.Compound.applyCueNumberOnTimelineAtIndex(int cueNumber, int timelineIndex, optional<double> blendDuration)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.applyCueNumberOnTimelineAtIndex", ["cueNumber", "timelineIndex", "blendDuration"], [cueNumber, timelineIndex, blendDuration], ("blendDuration",))
 
@@ -476,7 +476,7 @@ class API:
             blendDuration: optional parameter to set blend duration in seconds.
 
             API: null Pixera.Compound.applyCueNumberOnTimeline(string timelineName, int cueNumber, optional<double> blendDuration)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.applyCueNumberOnTimeline", ["timelineName", "cueNumber", "blendDuration"], [timelineName, cueNumber, blendDuration], ("blendDuration",))
 
@@ -489,7 +489,7 @@ class API:
             blendDuration: optional parameter to set blend duration in seconds.
 
             API: null Pixera.Compound.applyCueOnTimeline(string timelineName, string cueName, optional<double> blendDuration)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.applyCueOnTimeline", ["timelineName", "cueName", "blendDuration"], [timelineName, cueName, blendDuration], ("blendDuration",))
 
@@ -510,7 +510,7 @@ class API:
             (e.g. "Media/Folder/video.mov"). The layer is identified by a path separated by periods (e.g. "Timeline 1.Layer 1").
 
             API: null Pixera.Compound.assignResourceToLayer(string resourcePath, string layerPath)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.assignResourceToLayer", ["resourcePath", "layerPath"], [resourcePath, layerPath], ())
 
@@ -521,7 +521,7 @@ class API:
             (e.g. "Media/Folder/video.mov").
 
             API: null Pixera.Compound.refreshResource(string resourcePath)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.refreshResource", ["resourcePath"], [resourcePath], ())
 
@@ -532,7 +532,7 @@ class API:
             The layer is identified by a path separated by periods (e.g. "Timeline 1.Layer 1").
 
             API: null Pixera.Compound.setTransportModeOnLayer(string layerPath, int mode, boolean loop)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.setTransportModeOnLayer", ["layerPath", "mode", "loop"], [layerPath, mode, loop], ())
 
@@ -566,7 +566,7 @@ class API:
             Assign the resource with dmxfolder/dmxfile id to the clip at time in frames by layerpath
 
             API: null Pixera.Compound.assignResourceToClipAtTimeByDmxId(string layerPath, int dmxFolderId, int dmxFileId, double time)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.assignResourceToClipAtTimeByDmxId", ["layerPath", "dmxFolderId", "dmxFileId", "time"], [layerPath, dmxFolderId, dmxFileId, time], ())
 
@@ -576,7 +576,7 @@ class API:
             Assign the resource with dmxfolder/dmxfile id to the clip at hmsf time by layerpath
 
             API: null Pixera.Compound.assignResourceToClipAtHMSFStringByDmxId(string layerPath, int dmxFolderId, int dmxFileId, string hmsf)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.assignResourceToClipAtHMSFStringByDmxId", ["layerPath", "dmxFolderId", "dmxFileId", "hmsf"], [layerPath, dmxFolderId, dmxFileId, hmsf], ())
 
@@ -586,7 +586,7 @@ class API:
             Assign the resource with dmxfolder/dmxfile id to the clip at h m s f by layerpath
 
             API: null Pixera.Compound.assignResourceToClipAtHMSFByDmxId(string layerPath, int dmxFolderId, int dmxFileId, int h, int m, int s, int f)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.assignResourceToClipAtHMSFByDmxId", ["layerPath", "dmxFolderId", "dmxFileId", "h", "m", "s", "f"], [layerPath, dmxFolderId, dmxFileId, h, m, s, f], ())
 
@@ -599,7 +599,7 @@ class API:
             time: New time in frames.
 
             API: null Pixera.Compound.setCurrentTimeOfTimeline(string name, int time)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.setCurrentTimeOfTimeline", ["name", "time"], [name, time], ())
 
@@ -612,7 +612,7 @@ class API:
             time: New time in seconds.
 
             API: null Pixera.Compound.setCurrentTimeOfTimelineInSeconds(string name, double time)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.setCurrentTimeOfTimelineInSeconds", ["name", "time"], [name, time], ())
 
@@ -626,7 +626,7 @@ class API:
             mode: New playback mode (Play = 1, Pause = 2, Stop = 3).
 
             API: null Pixera.Compound.setCurrentTimeAndTransportModeOfTimelineInSeconds(string name, double time, int mode)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.setCurrentTimeAndTransportModeOfTimelineInSeconds", ["name", "time", "mode"], [name, time, mode], ())
 
@@ -706,7 +706,7 @@ class API:
             terminationDurationInMs: Default value is 10 sec. Duration until the blocking period is automatically terminated. We emphasize that if the default value is sufficient you should always use blockUiTimelineUpdates(false) for a controlled termination. Unit is milliseconds.
 
             API: null Pixera.Compound.blockUiTimelineUpdates(boolean doBlock, optional<int> terminationDurationInMs)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.blockUiTimelineUpdates", ["doBlock", "terminationDurationInMs"], [doBlock, terminationDurationInMs], ("terminationDurationInMs",))
 
@@ -714,7 +714,7 @@ class API:
         def startOpacityAnimationOfTimeline(name: str, fadeIn: bool, fullFadeDuration: float) -> list:
             """
             API: null Pixera.Compound.startOpacityAnimationOfTimeline(string name, boolean fadeIn, double fullFadeDuration)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.startOpacityAnimationOfTimeline", ["name", "fadeIn", "fullFadeDuration"], [name, fadeIn, fullFadeDuration], ())
 
@@ -726,7 +726,7 @@ class API:
             The resource is identified by a path build from signatures and separated by forward slashes (e.g. "Media/Folder/video.mov").
 
             API: null Pixera.Compound.createClipOnLayerAtTimeWithResource(string layerPath, double time, string resourcePath)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.createClipOnLayerAtTimeWithResource", ["layerPath", "time", "resourcePath"], [layerPath, time, resourcePath], ())
 
@@ -737,7 +737,7 @@ class API:
             The layer is identified by a path separated by periods (e.g. "Timeline 1.Layer 1").
 
             API: null Pixera.Compound.removeClipOnLayerWithIndex(string layerPath, int clipIndex)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.removeClipOnLayerWithIndex", ["layerPath", "clipIndex"], [layerPath, clipIndex], ())
 
@@ -748,7 +748,7 @@ class API:
             The layer is identified by a path separated by periods (e.g. "Timeline 1.Layer 1").
 
             API: null Pixera.Compound.removeAllClipsOnLayer(string layerPath)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.removeAllClipsOnLayer", ["layerPath"], [layerPath], ())
 
@@ -835,7 +835,7 @@ class API:
             takeover all clients
 
             API: null Pixera.Compound.takeOverAllClients()
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.takeOverAllClients", [], [], ())
 
@@ -845,7 +845,7 @@ class API:
             mute all incomming smpte inputs
 
             API: null Pixera.Compound.setPauseSmpteInput(boolean doPause)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.setPauseSmpteInput", ["doPause"], [doPause], ())
 
@@ -853,7 +853,7 @@ class API:
         def setAllowControlProtocolOutputs(allow: bool) -> list:
             """
             API: null Pixera.Compound.setAllowControlProtocolOutputs(boolean allow)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Compound.setAllowControlProtocolOutputs", ["allow"], [allow], ())
 
@@ -864,7 +864,7 @@ class API:
         def closeApp(saveProject: bool) -> list:
             """
             API: null Pixera.Session.closeApp(boolean saveProject)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Session.closeApp", ["saveProject"], [saveProject], ())
 
@@ -872,7 +872,7 @@ class API:
         def loadProject(path: str) -> list:
             """
             API: null Pixera.Session.loadProject(string path)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Session.loadProject", ["path"], [path], ())
 
@@ -880,7 +880,7 @@ class API:
         def saveProject() -> list:
             """
             API: null Pixera.Session.saveProject()
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Session.saveProject", [], [], ())
 
@@ -888,7 +888,7 @@ class API:
         def saveProjectAs(path: str) -> list:
             """
             API: null Pixera.Session.saveProjectAs(string path)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Session.saveProjectAs", ["path"], [path], ())
 
@@ -904,7 +904,7 @@ class API:
         def setProjectName(name: str) -> list:
             """
             API: null Pixera.Session.setProjectName(string name)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Session.setProjectName", ["name"], [name], ())
 
@@ -934,7 +934,7 @@ class API:
             Default if no mode is set is 1.
 
             API: null Pixera.Session.shutdownSystem(optional<int> mode)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Session.shutdownSystem", ["mode"], [mode], ("mode",))
 
@@ -960,7 +960,7 @@ class API:
             This function is called in Pixera Control when the live system's state changes.
 
             API: null Pixera.Session.liveSystemStateChange(string ip, string state)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Session.liveSystemStateChange", ["ip", "state"], [ip, state], ())
 
@@ -971,7 +971,7 @@ class API:
             Default if no mode is set is 1.
 
             API: null Pixera.Session.shutdownLiveSystem(string ip, optional<int> mode)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Session.shutdownLiveSystem", ["ip", "mode"], [ip, mode], ("mode",))
 
@@ -1002,7 +1002,7 @@ class API:
             Start live system.
 
             API: null Pixera.Session.startLiveSystem(string ip)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Session.startLiveSystem", ["ip"], [ip], ())
 
@@ -1012,7 +1012,7 @@ class API:
             Start all live systems in mapping/live sub-tab.
 
             API: null Pixera.Session.startLiveSystems()
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Session.startLiveSystems", [], [], ())
 
@@ -1022,7 +1022,7 @@ class API:
             Stop live system.
 
             API: null Pixera.Session.stopLiveSystem(string ip)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Session.stopLiveSystem", ["ip"], [ip], ())
 
@@ -1032,7 +1032,7 @@ class API:
             Stop all live systems in mapping/live sub-tab.
 
             API: null Pixera.Session.stopLiveSystems()
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Session.stopLiveSystems", [], [], ())
 
@@ -1042,7 +1042,7 @@ class API:
             Restart live system.
 
             API: null Pixera.Session.restartLiveSystem(string ip)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Session.restartLiveSystem", ["ip"], [ip], ())
 
@@ -1052,7 +1052,7 @@ class API:
             Restart all live systems in mapping/live sub-tab.
 
             API: null Pixera.Session.restartLiveSystems()
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Session.restartLiveSystems", [], [], ())
 
@@ -1062,7 +1062,7 @@ class API:
             This action is run when remote heartbeat tracking detects a state change in the system.
 
             API: null Pixera.Session.remoteSystemStateChange(string ip, string state)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Session.remoteSystemStateChange", ["ip", "state"], [ip, state], ())
 
@@ -1086,7 +1086,7 @@ class API:
         def setVideoStreamActiveState(ip: str, device: str, isActive: bool) -> list:
             """
             API: null Pixera.Session.setVideoStreamActiveState(string ip, string device, boolean isActive)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Session.setVideoStreamActiveState", ["ip", "device", "isActive"], [ip, device, isActive], ())
 
@@ -1112,7 +1112,7 @@ class API:
             toggle output identification
 
             API: null Pixera.Session.toggleOutputIdentification()
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Session.toggleOutputIdentification", [], [], ())
 
@@ -1122,7 +1122,7 @@ class API:
             toggle onscreen statistics
 
             API: null Pixera.Session.toggleOnScreenStats()
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Session.toggleOnScreenStats", [], [], ())
 
@@ -1132,7 +1132,7 @@ class API:
             activate/deactivate all assigned outputs
 
             API: null Pixera.Session.setAllAssignedOutputs(boolean active)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Session.setAllAssignedOutputs", ["active"], [active], ())
 
@@ -1156,7 +1156,7 @@ class API:
             Called when the live system has become unavailable.
 
             API: null Pixera.LiveSystems.liveSystemNotAvailable(int reason, handle system)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.LiveSystems.liveSystemNotAvailable", ["reason", "system"], [reason, system], ())
 
@@ -1231,7 +1231,7 @@ class API:
             def resetCumulativePerformanceMonitoringValues(handle: handle) -> list:
                 """
                 API: null Pixera.LiveSystems.MultiUserMember.resetCumulativePerformanceMonitoringValues()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.MultiUserMember.resetCumulativePerformanceMonitoringValues", ["handle"], [handle], ())
 
@@ -1242,7 +1242,7 @@ class API:
                 all files that have not been used yet in any timeline are also distributed.
 
                 API: null Pixera.LiveSystems.MultiUserMember.ensureFileDistribution(boolean includeNotUsedYet)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.MultiUserMember.ensureFileDistribution", ["handle", "includeNotUsedYet"], [handle, includeNotUsedYet], ())
 
@@ -1255,7 +1255,7 @@ class API:
                 3: Shut down and reboot.
 
                 API: null Pixera.LiveSystems.MultiUserMember.shutDown(int mode)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.MultiUserMember.shutDown", ["handle", "mode"], [handle, mode], ())
 
@@ -1283,7 +1283,7 @@ class API:
             def resetEngine(handle: handle) -> list:
                 """
                 API: null Pixera.LiveSystems.MultiUserMember.resetEngine()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.MultiUserMember.resetEngine", ["handle"], [handle], ())
 
@@ -1291,7 +1291,7 @@ class API:
             def restartEngine(handle: handle) -> list:
                 """
                 API: null Pixera.LiveSystems.MultiUserMember.restartEngine()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.MultiUserMember.restartEngine", ["handle"], [handle], ())
 
@@ -1299,7 +1299,7 @@ class API:
             def startEngine(handle: handle) -> list:
                 """
                 API: null Pixera.LiveSystems.MultiUserMember.startEngine()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.MultiUserMember.startEngine", ["handle"], [handle], ())
 
@@ -1307,7 +1307,7 @@ class API:
             def closeEngine(handle: handle) -> list:
                 """
                 API: null Pixera.LiveSystems.MultiUserMember.closeEngine()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.MultiUserMember.closeEngine", ["handle"], [handle], ())
 
@@ -1315,7 +1315,7 @@ class API:
             def triggerBackup(handle: handle, applyControlCommand: Optional[bool] = None) -> list:
                 """
                 API: null Pixera.LiveSystems.MultiUserMember.triggerBackup(optional<bool> applyControlCommand)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.MultiUserMember.triggerBackup", ["handle", "applyControlCommand"], [handle, applyControlCommand], ("applyControlCommand",))
 
@@ -1382,7 +1382,7 @@ class API:
             def setBackupRole(handle: handle, role: int) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.setBackupRole(int role)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.setBackupRole", ["handle", "role"], [handle, role], ())
 
@@ -1416,7 +1416,7 @@ class API:
             def resetCumulativePerformanceMonitoringValues(handle: handle) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.resetCumulativePerformanceMonitoringValues()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.resetCumulativePerformanceMonitoringValues", ["handle"], [handle], ())
 
@@ -1424,7 +1424,7 @@ class API:
             def moveMappingsToOutputs(handle: handle, hdlSrc: handle, outputIdPathMapStr: str) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.moveMappingsToOutputs(handle hdlSrc, string outputIdPathMapStr)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.moveMappingsToOutputs", ["handle", "hdlSrc", "outputIdPathMapStr"], [handle, hdlSrc, outputIdPathMapStr], ())
 
@@ -1432,7 +1432,7 @@ class API:
             def setUsagePresetName(handle: handle, name: str) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.setUsagePresetName(string name)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.setUsagePresetName", ["handle", "name"], [handle, name], ())
 
@@ -1448,7 +1448,7 @@ class API:
             def updateUsagePreset(handle: handle) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.updateUsagePreset()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.updateUsagePreset", ["handle"], [handle], ())
 
@@ -1456,7 +1456,7 @@ class API:
             def saveUsagePresetAs(handle: handle, name: str) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.saveUsagePresetAs(string name)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.saveUsagePresetAs", ["handle", "name"], [handle, name], ())
 
@@ -1466,7 +1466,7 @@ class API:
                 Applies the currently selected usage preset.
 
                 API: null Pixera.LiveSystems.LiveSystem.applyUsagePreset()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.applyUsagePreset", ["handle"], [handle], ())
 
@@ -1476,7 +1476,7 @@ class API:
                 Applies the usage preset with the matching name.
 
                 API: null Pixera.LiveSystems.LiveSystem.applyUsagePresetWithName(string name)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.applyUsagePresetWithName", ["handle", "name"], [handle, name], ())
 
@@ -1484,7 +1484,7 @@ class API:
             def exportUsagePreset(handle: handle, path: str) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.exportUsagePreset(string path)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.exportUsagePreset", ["handle", "path"], [handle, path], ())
 
@@ -1492,7 +1492,7 @@ class API:
             def importUsagePreset(handle: handle, path: str) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.importUsagePreset(string path)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.importUsagePreset", ["handle", "path"], [handle, path], ())
 
@@ -1500,7 +1500,7 @@ class API:
             def clearExportedMappings(handle: handle, path: str, onlyServicePath: bool) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.clearExportedMappings(string path, boolean onlyServicePath)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.clearExportedMappings", ["handle", "path", "onlyServicePath"], [handle, path, onlyServicePath], ())
 
@@ -1508,7 +1508,7 @@ class API:
             def exportMappings(handle: handle, path: str) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.exportMappings(string path)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.exportMappings", ["handle", "path"], [handle, path], ())
 
@@ -1516,7 +1516,7 @@ class API:
             def importMappings(handle: handle, path: str, outputIdPathMapStr: str) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.importMappings(string path, string outputIdPathMapStr)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.importMappings", ["handle", "path", "outputIdPathMapStr"], [handle, path, outputIdPathMapStr], ())
 
@@ -1524,7 +1524,7 @@ class API:
             def exportMappingsDirectly(handle: handle, path: str) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.exportMappingsDirectly(string path)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.exportMappingsDirectly", ["handle", "path"], [handle, path], ())
 
@@ -1532,7 +1532,7 @@ class API:
             def importMappingsDirectly(handle: handle, path: str, outputIdPathMapStr: str) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.importMappingsDirectly(string path, string outputIdPathMapStr)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.importMappingsDirectly", ["handle", "path", "outputIdPathMapStr"], [handle, path, outputIdPathMapStr], ())
 
@@ -1540,7 +1540,7 @@ class API:
             def exportMappingsToLiveSystemPath(handle: handle, parentPath: str) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.exportMappingsToLiveSystemPath(string parentPath)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.exportMappingsToLiveSystemPath", ["handle", "parentPath"], [handle, parentPath], ())
 
@@ -1548,7 +1548,7 @@ class API:
             def importMappingsFromLiveSystemPath(handle: handle, parentPath: str) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.importMappingsFromLiveSystemPath(string parentPath)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.importMappingsFromLiveSystemPath", ["handle", "parentPath"], [handle, parentPath], ())
 
@@ -1556,7 +1556,7 @@ class API:
             def clearExportedMappingsAtLiveSystemPath(handle: handle, path: str) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.clearExportedMappingsAtLiveSystemPath(string path)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.clearExportedMappingsAtLiveSystemPath", ["handle", "path"], [handle, path], ())
 
@@ -1567,7 +1567,7 @@ class API:
                 all files that have not been used yet in any timeline are also distributed.
 
                 API: null Pixera.LiveSystems.LiveSystem.ensureFileDistribution(boolean includeNotUsedYet)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.ensureFileDistribution", ["handle", "includeNotUsedYet"], [handle, includeNotUsedYet], ())
 
@@ -1580,7 +1580,7 @@ class API:
                 3: Shut down and reboot.
 
                 API: null Pixera.LiveSystems.LiveSystem.shutDown(int mode)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.shutDown", ["handle", "mode"], [handle, mode], ())
 
@@ -1658,7 +1658,7 @@ class API:
             def resetEngine(handle: handle) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.resetEngine()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.resetEngine", ["handle"], [handle], ())
 
@@ -1666,7 +1666,7 @@ class API:
             def restartEngine(handle: handle) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.restartEngine()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.restartEngine", ["handle"], [handle], ())
 
@@ -1674,7 +1674,7 @@ class API:
             def startEngine(handle: handle) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.startEngine()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.startEngine", ["handle"], [handle], ())
 
@@ -1682,7 +1682,7 @@ class API:
             def closeEngine(handle: handle) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.closeEngine()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.closeEngine", ["handle"], [handle], ())
 
@@ -1690,7 +1690,7 @@ class API:
             def setAudioMasterVolume(handle: handle, channel: int, volume: float) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.setAudioMasterVolume(int channel, double volume)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.setAudioMasterVolume", ["handle", "channel", "volume"], [handle, channel, volume], ())
 
@@ -1706,7 +1706,7 @@ class API:
             def setAudioMasterMute(handle: handle, channel: int, state: bool) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.setAudioMasterMute(int channel, boolean state)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.setAudioMasterMute", ["handle", "channel", "state"], [handle, channel, state], ())
 
@@ -1722,7 +1722,7 @@ class API:
             def toggleAudioMasterMute(handle: handle, channel: int) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.toggleAudioMasterMute(int channel)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.toggleAudioMasterMute", ["handle", "channel"], [handle, channel], ())
 
@@ -1730,7 +1730,7 @@ class API:
             def setAudioTimecodeInput(handle: handle, channel: int, state: bool) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.setAudioTimecodeInput(int channel, boolean state)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.setAudioTimecodeInput", ["handle", "channel", "state"], [handle, channel, state], ())
 
@@ -1738,7 +1738,7 @@ class API:
             def triggerBackup(handle: handle, applyControlCommand: Optional[bool] = None) -> list:
                 """
                 API: null Pixera.LiveSystems.LiveSystem.triggerBackup(optional<bool> applyControlCommand)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.triggerBackup", ["handle", "applyControlCommand"], [handle, applyControlCommand], ("applyControlCommand",))
 
@@ -1748,7 +1748,7 @@ class API:
                 Files which are not used in the current project are deleted from the RX-Cache directory.
 
                 API: null Pixera.LiveSystems.LiveSystem.deleteUnusedFilesFromCache()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.LiveSystem.deleteUnusedFilesFromCache", ["handle"], [handle], ())
 
@@ -1791,7 +1791,7 @@ class API:
             def update(handle: handle) -> list:
                 """
                 API: null Pixera.LiveSystems.UsagePreset.update()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.UsagePreset.update", ["handle"], [handle], ())
 
@@ -1799,7 +1799,7 @@ class API:
             def apply(handle: handle, destinationIp: str) -> list:
                 """
                 API: null Pixera.LiveSystems.UsagePreset.apply(string destinationIp)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.UsagePreset.apply", ["handle", "destinationIp"], [handle, destinationIp], ())
 
@@ -1807,7 +1807,7 @@ class API:
             def importFromFile(handle: handle, path: str) -> list:
                 """
                 API: null Pixera.LiveSystems.UsagePreset.importFromFile(string path)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.UsagePreset.importFromFile", ["handle", "path"], [handle, path], ())
 
@@ -1815,7 +1815,7 @@ class API:
             def exportToFile(handle: handle, path: str) -> list:
                 """
                 API: null Pixera.LiveSystems.UsagePreset.exportToFile(string path)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.UsagePreset.exportToFile", ["handle", "path"], [handle, path], ())
 
@@ -1899,7 +1899,7 @@ class API:
                 Set output active/inactive.
 
                 API: null Pixera.LiveSystems.Output.setActive(boolean active)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.Output.setActive", ["handle", "active"], [handle, active], ())
 
@@ -1919,7 +1919,7 @@ class API:
                 set output identify.
 
                 API: null Pixera.LiveSystems.Output.setIdentify(boolean state)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.Output.setIdentify", ["handle", "state"], [handle, state], ())
 
@@ -1975,7 +1975,7 @@ class API:
                 set outputs is aggregate
 
                 API: null Pixera.LiveSystems.Output.setIsOutputAggregate(boolean state)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.Output.setIsOutputAggregate", ["handle", "state"], [handle, state], ())
 
@@ -1995,7 +1995,7 @@ class API:
                 set vertical and horizontal aggregate settings
 
                 API: null Pixera.LiveSystems.Output.setAggregateDims(int horizontalCount, int verticalCount)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.Output.setAggregateDims", ["handle", "horizontalCount", "verticalCount"], [handle, horizontalCount, verticalCount], ())
 
@@ -2042,7 +2042,7 @@ class API:
                 Set video stream active/inactive.
 
                 API: null Pixera.LiveSystems.VideoStream.setActive(boolean active)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.VideoStream.setActive", ["handle", "active"], [handle, active], ())
 
@@ -2078,7 +2078,7 @@ class API:
             def setIpAddress(handle: handle, ipAddress: str) -> list:
                 """
                 API: null Pixera.LiveSystems.VideoStream.setIpAddress(string ipAddress)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.LiveSystems.VideoStream.setIpAddress", ["handle", "ipAddress"], [handle, ipAddress], ())
 
@@ -2138,7 +2138,7 @@ class API:
                 Sets the default duration in milliseconds used to fade to a time or a cue in the timeline.
 
                 API: null Pixera.Settings.SettingsGeneral.setFadeToTimeDuration(int timeInMilliseconds)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Settings.SettingsGeneral.setFadeToTimeDuration", ["timeInMilliseconds"], [timeInMilliseconds], ())
 
@@ -2158,7 +2158,7 @@ class API:
                 Sets the default delay in milliseconds after that a fade to a time or a cue in the timeline starts.
 
                 API: null Pixera.Settings.SettingsGeneral.setFadeToTimeDelay(int timeInMilliseconds)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Settings.SettingsGeneral.setFadeToTimeDelay", ["timeInMilliseconds"], [timeInMilliseconds], ())
 
@@ -2225,7 +2225,7 @@ class API:
                 if not a new one will be created.
 
                 API: null Pixera.Settings.SettingsTranscoding.addOrChangeTranscodingPreset(string preset)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Settings.SettingsTranscoding.addOrChangeTranscodingPreset", ["preset"], [preset], ())
 
@@ -2238,7 +2238,7 @@ class API:
                 Defines the rule for the automatic distribution of newly added resources. 0: None, 1: On Import, 2: On Use
 
                 API: null Pixera.Settings.SettingsResourceDistribution.setAutoDistributionRule(int rule)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Settings.SettingsResourceDistribution.setAutoDistributionRule", ["rule"], [rule], ())
 
@@ -2275,7 +2275,7 @@ class API:
             then Screen.setPosition(.).
 
             API: null Pixera.Screens.setNamedScreenPosition(string name, optional<double> xPos, optional<double> yPos, optional<double> zPos)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Screens.setNamedScreenPosition", ["name", "xPos", "yPos", "zPos"], [name, xPos, yPos, zPos], ("xPos", "yPos", "zPos"))
 
@@ -2504,7 +2504,7 @@ class API:
                 4 : Snap Mode to Vertices with Projection
 
                 API: null Pixera.Screens.Screen.snapPerspectiveCornersToScreen(int mode)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.Screen.snapPerspectiveCornersToScreen", ["handle", "mode"], [handle, mode], ())
 
@@ -2621,7 +2621,7 @@ class API:
                 The rotation parameter rotates the frustum base around the Z axis the given number of degrees.
 
                 API: null Pixera.Screens.Screen.setContentSamplingFrustumBase(double x, double y, double width, double height, double rotation, double originScreenId)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.Screen.setContentSamplingFrustumBase", ["handle", "x", "y", "width", "height", "rotation", "originScreenId"], [handle, x, y, width, height, rotation, originScreenId], ())
 
@@ -2637,7 +2637,7 @@ class API:
                 "vioso"
 
                 API: null Pixera.Screens.Screen.runCalibration(string mode, string diff)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.Screen.runCalibration", ["handle", "mode", "diff"], [handle, mode, diff], ())
 
@@ -2650,7 +2650,7 @@ class API:
                 "vioso"
 
                 API: null Pixera.Screens.Screen.closeCalibration(string diff)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.Screen.closeCalibration", ["handle", "diff"], [handle, diff], ())
 
@@ -2661,7 +2661,7 @@ class API:
                 depends on the tool. If it is left empty an appropriate default will be used.
 
                 API: null Pixera.Screens.Screen.editCalibration(string diff)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.Screen.editCalibration", ["handle", "diff"], [handle, diff], ())
 
@@ -2682,7 +2682,7 @@ class API:
                 Same functionality as pressing Button "Distribute Loaded Calibrations"
 
                 API: null Pixera.Screens.Screen.distributeLoadedCalibrationAndReload()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.Screen.distributeLoadedCalibrationAndReload", ["handle"], [handle], ())
 
@@ -2693,7 +2693,7 @@ class API:
                 on the tool. If it is empty an appropriate default will be used.
 
                 API: null Pixera.Screens.Screen.resetWarpFile(string diff)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.Screen.resetWarpFile", ["handle", "diff"], [handle, diff], ())
 
@@ -2703,7 +2703,7 @@ class API:
                 Loads the warp file at the specified path for the screen.
 
                 API: null Pixera.Screens.Screen.loadWarpFile(string filePath)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.Screen.loadWarpFile", ["handle", "filePath"], [handle, filePath], ())
 
@@ -2714,7 +2714,7 @@ class API:
                 to load MPCDI files.
 
                 API: null Pixera.Screens.Screen.loadWarpFileWithDiff(string filePath, string diff)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.Screen.loadWarpFileWithDiff", ["handle", "filePath", "diff"], [handle, filePath, diff], ())
 
@@ -2724,7 +2724,7 @@ class API:
                 Adds the warp file at the specified path to those loaded for the screen.
 
                 API: null Pixera.Screens.Screen.addWarpFile(string filePath)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.Screen.addWarpFile", ["handle", "filePath"], [handle, filePath], ())
 
@@ -2735,7 +2735,7 @@ class API:
                 to add MPCDI files.
 
                 API: null Pixera.Screens.Screen.addWarpFileWithDiff(string filePath, string diff)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.Screen.addWarpFileWithDiff", ["handle", "filePath", "diff"], [handle, filePath, diff], ())
 
@@ -2743,7 +2743,7 @@ class API:
             def loadColorCalibration(handle: handle, calibrationName: str) -> list:
                 """
                 API: null Pixera.Screens.Screen.loadColorCalibration(string calibrationName)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.Screen.loadColorCalibration", ["handle", "calibrationName"], [handle, calibrationName], ())
 
@@ -2751,7 +2751,7 @@ class API:
             def runColorCalibration(handle: handle) -> list:
                 """
                 API: null Pixera.Screens.Screen.runColorCalibration()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.Screen.runColorCalibration", ["handle"], [handle], ())
 
@@ -2761,7 +2761,7 @@ class API:
                 Sets the screen visibility in the workspace.
 
                 API: null Pixera.Screens.Screen.setIsVisible(boolean isVisible)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.Screen.setIsVisible", ["handle", "isVisible"], [handle, isVisible], ())
 
@@ -2781,7 +2781,7 @@ class API:
                 Sets if a screen can be used as a projection surface.
 
                 API: null Pixera.Screens.Screen.setIsProjectable(boolean isProjectable)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.Screen.setIsProjectable", ["handle", "isProjectable"], [handle, isProjectable], ())
 
@@ -2801,7 +2801,7 @@ class API:
                 Triggers a manual update of the mappings between this screen and the projectors.
 
                 API: null Pixera.Screens.Screen.triggerRefreshMapping()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.Screen.triggerRefreshMapping", ["handle"], [handle], ())
 
@@ -2811,7 +2811,7 @@ class API:
                 Reset all color correction
 
                 API: null Pixera.Screens.Screen.resetAllColorCorrections()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.Screen.resetAllColorCorrections", ["handle"], [handle], ())
 
@@ -2836,7 +2836,7 @@ class API:
                 which returns the relevant data in JSON format.
 
                 API: null Pixera.Screens.Screen.setColorCorrectionWithPath(string path, float value)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.Screen.setColorCorrectionWithPath", ["handle", "path", "value"], [handle, path, value], ())
 
@@ -2856,7 +2856,7 @@ class API:
                 Set colorcorrection with jsonstring
 
                 API: null Pixera.Screens.Screen.setColorCorrectionAsJsonString(string colorCorrection)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.Screen.setColorCorrectionAsJsonString", ["handle", "colorCorrection"], [handle, colorCorrection], ())
 
@@ -2886,7 +2886,7 @@ class API:
                 Set the active state of a active screen Blackout.
 
                 API: null Pixera.Screens.Screen.setBlackout(boolean isActive)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.Screen.setBlackout", ["handle", "isActive"], [handle, isActive], ())
 
@@ -2941,7 +2941,7 @@ class API:
                 Sets the position in meters.
 
                 API: null Pixera.Screens.StudioCamera.setPosition(optional<double> xPos, optional<double> yPos, optional<double> zPos)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.StudioCamera.setPosition", ["handle", "xPos", "yPos", "zPos"], [handle, xPos, yPos, zPos], ("xPos", "yPos", "zPos"))
 
@@ -2961,7 +2961,7 @@ class API:
                 Sets the euler rotation in degrees.
 
                 API: null Pixera.Screens.StudioCamera.setRotation(optional<double> xRot, optional<double> yRot, optional<double> zRot)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.StudioCamera.setRotation", ["handle", "xRot", "yRot", "zRot"], [handle, xRot, yRot, zRot], ("xRot", "yRot", "zRot"))
 
@@ -2971,7 +2971,7 @@ class API:
                 Sets rotation in quaternions.
 
                 API: null Pixera.Screens.StudioCamera.setRotationQuat(optional<double> xQuat, optional<double> yQuat, optional<double> zQuat, optional<double> wQuat)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.StudioCamera.setRotationQuat", ["handle", "xQuat", "yQuat", "zQuat", "wQuat"], [handle, xQuat, yQuat, zQuat, wQuat], ("xQuat", "yQuat", "zQuat", "wQuat"))
 
@@ -2991,7 +2991,7 @@ class API:
                 Sets the position in meters, rotation and fov in degrees.
 
                 API: null Pixera.Screens.StudioCamera.setTransformation(optional<double> xPos, optional<double> yPos, optional<double> zPos, optional<double> xRot, optional<double> yRot, optional<double> zRot, optional<double> fov, optional<double> aspectRatio)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.StudioCamera.setTransformation", ["handle", "xPos", "yPos", "zPos", "xRot", "yRot", "zRot", "fov", "aspectRatio"], [handle, xPos, yPos, zPos, xRot, yRot, zRot, fov, aspectRatio], ("xPos", "yPos", "zPos", "xRot", "yRot", "zRot", "fov", "aspectRatio"))
 
@@ -3001,7 +3001,7 @@ class API:
                 Sets the position in meters, rotation in quaternions, fov in degrees.
 
                 API: null Pixera.Screens.StudioCamera.setTransformationQuat(optional<double> xPos, optional<double> yPos, optional<double> zPos, optional<double> xQuat, optional<double> yQuat, optional<double> zQuat, optional<double> wQuat, optional<double> fov, optional<double> aspectRatio)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.StudioCamera.setTransformationQuat", ["handle", "xPos", "yPos", "zPos", "xQuat", "yQuat", "zQuat", "wQuat", "fov", "aspectRatio"], [handle, xPos, yPos, zPos, xQuat, yQuat, zQuat, wQuat, fov, aspectRatio], ("xPos", "yPos", "zPos", "xQuat", "yQuat", "zQuat", "wQuat", "fov", "aspectRatio"))
 
@@ -3011,7 +3011,7 @@ class API:
                 Sets the position in meters, rotation and fov in degrees, centerX, centerX and panelWidth in millimeters.
 
                 API: null Pixera.Screens.StudioCamera.setTransformationAndLensProps(double xPos, double yPos, double zPos, double xRot, double yRot, double zRot, double fov, double aspectRatio, double nearClip, double farClip, double aperture, double focus, double iris, double k1, double k2, double centerX, double centerY, double panelWidth)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.StudioCamera.setTransformationAndLensProps", ["handle", "xPos", "yPos", "zPos", "xRot", "yRot", "zRot", "fov", "aspectRatio", "nearClip", "farClip", "aperture", "focus", "iris", "k1", "k2", "centerX", "centerY", "panelWidth"], [handle, xPos, yPos, zPos, xRot, yRot, zRot, fov, aspectRatio, nearClip, farClip, aperture, focus, iris, k1, k2, centerX, centerY, panelWidth], ())
 
@@ -3021,7 +3021,7 @@ class API:
                 Sets the position in meters, rotation in quaternions, fov in degrees, centerX, centerX and panelWidth in millimeters.
 
                 API: null Pixera.Screens.StudioCamera.setTransformationAndLensPropsQuat(double xPos, double yPos, double zPos, double xQuat, double yQuat, double zQuat, double wQuat, double fov, double aspectRatio, double nearClip, double farClip, double aperture, double focus, double iris, double k1, double k2, double centerX, double centerY, double panelWidth)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.StudioCamera.setTransformationAndLensPropsQuat", ["handle", "xPos", "yPos", "zPos", "xQuat", "yQuat", "zQuat", "wQuat", "fov", "aspectRatio", "nearClip", "farClip", "aperture", "focus", "iris", "k1", "k2", "centerX", "centerY", "panelWidth"], [handle, xPos, yPos, zPos, xQuat, yQuat, zQuat, wQuat, fov, aspectRatio, nearClip, farClip, aperture, focus, iris, k1, k2, centerX, centerY, panelWidth], ())
 
@@ -3031,7 +3031,7 @@ class API:
                 Sets the position in meters, rotation and fov in degrees, centerX, centerX and panelWidth in millimeters.
 
                 API: null Pixera.Screens.StudioCamera.setTransformationAndLensPropsExt(double xPos, double yPos, double zPos, double xRot, double yRot, double zRot, double fov, double aspectRatio, double nearClip, double farClip, double aperture, double focus, double focalDistance, double zoom, double iris, double k1, double k2, double k3, double p1, double p2, double centerX, double centerY, double panelWidth, double overscan, optional<double> focalLength, optional<double> focalLengthDistorted)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.StudioCamera.setTransformationAndLensPropsExt", ["handle", "xPos", "yPos", "zPos", "xRot", "yRot", "zRot", "fov", "aspectRatio", "nearClip", "farClip", "aperture", "focus", "focalDistance", "zoom", "iris", "k1", "k2", "k3", "p1", "p2", "centerX", "centerY", "panelWidth", "overscan", "focalLength", "focalLengthDistorted"], [handle, xPos, yPos, zPos, xRot, yRot, zRot, fov, aspectRatio, nearClip, farClip, aperture, focus, focalDistance, zoom, iris, k1, k2, k3, p1, p2, centerX, centerY, panelWidth, overscan, focalLength, focalLengthDistorted], ("focalLength", "focalLengthDistorted"))
 
@@ -3041,7 +3041,7 @@ class API:
                 Sets the position in meters, rotation in quaternions, fov in degrees, centerX, centerX and panelWidth in millimeters.
 
                 API: null Pixera.Screens.StudioCamera.setTransformationAndLensPropsExtQuat(double xPos, double yPos, double zPos, double xQuat, double yQuat, double zQuat, double wQuat, double fov, double aspectRatio, double nearClip, double farClip, double aperture, double focus, double focalDistance, double zoom, double iris, double k1, double k2, double k3, double p1, double p2, double centerX, double centerY, double panelWidth, double overscan, optional<double> focalLength, optional<double> focalLengthDistorted)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.StudioCamera.setTransformationAndLensPropsExtQuat", ["handle", "xPos", "yPos", "zPos", "xQuat", "yQuat", "zQuat", "wQuat", "fov", "aspectRatio", "nearClip", "farClip", "aperture", "focus", "focalDistance", "zoom", "iris", "k1", "k2", "k3", "p1", "p2", "centerX", "centerY", "panelWidth", "overscan", "focalLength", "focalLengthDistorted"], [handle, xPos, yPos, zPos, xQuat, yQuat, zQuat, wQuat, fov, aspectRatio, nearClip, farClip, aperture, focus, focalDistance, zoom, iris, k1, k2, k3, p1, p2, centerX, centerY, panelWidth, overscan, focalLength, focalLengthDistorted], ("focalLength", "focalLengthDistorted"))
 
@@ -3051,7 +3051,7 @@ class API:
                 Set the tracking input pause.
 
                 API: null Pixera.Screens.StudioCamera.setTrackingInputPause(boolean pause)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.StudioCamera.setTrackingInputPause", ["handle", "pause"], [handle, pause], ())
 
@@ -3071,7 +3071,7 @@ class API:
                 Set the tracking input position pause.
 
                 API: null Pixera.Screens.StudioCamera.setUsePositionPropertiesFromTracking(boolean pause)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.StudioCamera.setUsePositionPropertiesFromTracking", ["handle", "pause"], [handle, pause], ())
 
@@ -3091,7 +3091,7 @@ class API:
                 Set the tracking input rotation pause.
 
                 API: null Pixera.Screens.StudioCamera.setUseRotationPropertiesFromTracking(boolean pause)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.StudioCamera.setUseRotationPropertiesFromTracking", ["handle", "pause"], [handle, pause], ())
 
@@ -3111,7 +3111,7 @@ class API:
                 Set the camera to project on the associated screens.
 
                 API: null Pixera.Screens.StudioCamera.setProjectOnAssociatedScreens(boolean state)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.StudioCamera.setProjectOnAssociatedScreens", ["handle", "state"], [handle, state], ())
 
@@ -3131,7 +3131,7 @@ class API:
                 Move the projected inner frustum rendering to the top among multiple studio cameras.
 
                 API: null Pixera.Screens.StudioCamera.moveToTop()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.StudioCamera.moveToTop", ["handle"], [handle], ())
 
@@ -3211,7 +3211,7 @@ class API:
                 Sets the position in meters, rotation and fov in degrees. The look at point is not locked by default.
 
                 API: null Pixera.Screens.Perspective.setTransformation(optional<double> xPos, optional<double> yPos, optional<double> zPos, optional<double> xRot, optional<double> yRot, optional<double> zRot, optional<double> fov, optional<double> aspectRatio, optional<bool> lockLookAtPt)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.Perspective.setTransformation", ["handle", "xPos", "yPos", "zPos", "xRot", "yRot", "zRot", "fov", "aspectRatio", "lockLookAtPt"], [handle, xPos, yPos, zPos, xRot, yRot, zRot, fov, aspectRatio, lockLookAtPt], ("xPos", "yPos", "zPos", "xRot", "yRot", "zRot", "fov", "aspectRatio", "lockLookAtPt"))
 
@@ -3219,7 +3219,7 @@ class API:
             def setGeneralizedPerspectivePosition(handle: handle, xPos: Optional[float] = None, yPos: Optional[float] = None, zPos: Optional[float] = None) -> list:
                 """
                 API: null Pixera.Screens.Perspective.setGeneralizedPerspectivePosition(optional<double> xPos, optional<double> yPos, optional<double> zPos)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Screens.Perspective.setGeneralizedPerspectivePosition", ["handle", "xPos", "yPos", "zPos"], [handle, xPos, yPos, zPos], ("xPos", "yPos", "zPos"))
 
@@ -3338,7 +3338,7 @@ class API:
                 Therefore, Screen.getId() should be used to fill the screenId parameter.
 
                 API: null Pixera.Projectors.Projector.activateScreenMapping(double screenId, boolean isActive)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Projectors.Projector.activateScreenMapping", ["handle", "screenId", "isActive"], [handle, screenId, isActive], ())
 
@@ -3348,7 +3348,7 @@ class API:
                 Set the active state of a projector Blackout.
 
                 API: null Pixera.Projectors.Projector.setBlackout(boolean isActive)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Projectors.Projector.setBlackout", ["handle", "isActive"], [handle, isActive], ())
 
@@ -3368,7 +3368,7 @@ class API:
                 set Render Order ID
 
                 API: null Pixera.Projectors.Projector.setRenderOrderId(double screenId, int orderId)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Projectors.Projector.setRenderOrderId", ["handle", "screenId", "orderId"], [handle, screenId, orderId], ())
 
@@ -3388,7 +3388,7 @@ class API:
                 Set the softedge of a projector for a specific screen active. If screenName is empty changes will be applied to all.
 
                 API: null Pixera.Projectors.Projector.setSoftedgeVisible(string screenName, boolean visible)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Projectors.Projector.setSoftedgeVisible", ["handle", "screenName", "visible"], [handle, screenName, visible], ())
 
@@ -3398,7 +3398,7 @@ class API:
                 Reset all color correction
 
                 API: null Pixera.Projectors.Projector.resetAllColorCorrections()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Projectors.Projector.resetAllColorCorrections", ["handle"], [handle], ())
 
@@ -3408,7 +3408,7 @@ class API:
                 Set ColorCorrection Value by Path
 
                 API: null Pixera.Projectors.Projector.setColorCorrectionWithPath(string path, float value)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Projectors.Projector.setColorCorrectionWithPath", ["handle", "path", "value"], [handle, path, value], ())
 
@@ -3428,7 +3428,7 @@ class API:
                 Set colorcorrection with jsonstring
 
                 API: null Pixera.Projectors.Projector.setColorCorrectionAsJsonString(string colorCorrection)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Projectors.Projector.setColorCorrectionAsJsonString", ["handle", "colorCorrection"], [handle, colorCorrection], ())
 
@@ -3458,7 +3458,7 @@ class API:
                 Set projector output.
 
                 API: null Pixera.Projectors.Projector.setOutput(handle outputHandle)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Projectors.Projector.setOutput", ["handle", "outputHandle"], [handle, outputHandle], ())
 
@@ -3468,7 +3468,7 @@ class API:
                 Set horizontal lens shift.
 
                 API: null Pixera.Projectors.Projector.setHorizontalLensShift(double value)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Projectors.Projector.setHorizontalLensShift", ["handle", "value"], [handle, value], ())
 
@@ -3488,7 +3488,7 @@ class API:
                 Set vertical lens shift.
 
                 API: null Pixera.Projectors.Projector.setVerticalLensShift(double value)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Projectors.Projector.setVerticalLensShift", ["handle", "value"], [handle, value], ())
 
@@ -3509,7 +3509,7 @@ class API:
                 only generic Projector can be set
 
                 API: null Pixera.Projectors.Projector.setBrightness(int value)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Projectors.Projector.setBrightness", ["handle", "value"], [handle, value], ())
 
@@ -3529,7 +3529,7 @@ class API:
                 Set lens fov.
 
                 API: null Pixera.Projectors.Projector.setFov(double value)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Projectors.Projector.setFov", ["handle", "value"], [handle, value], ())
 
@@ -3549,7 +3549,7 @@ class API:
                 Set lens throw Ratio.
 
                 API: null Pixera.Projectors.Projector.setThrowRatio(double value)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Projectors.Projector.setThrowRatio", ["handle", "value"], [handle, value], ())
 
@@ -3570,7 +3570,7 @@ class API:
                 values needs to be in meters
 
                 API: null Pixera.Projectors.Projector.setLookAtPoint(double x, double y, double z)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Projectors.Projector.setLookAtPoint", ["handle", "x", "y", "z"], [handle, x, y, z], ())
 
@@ -3593,7 +3593,7 @@ class API:
                 if it is connected the projector has the resolution of the output.
 
                 API: null Pixera.Projectors.Projector.setResolution(int x, int y)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Projectors.Projector.setResolution", ["handle", "x", "y"], [handle, x, y], ())
 
@@ -3709,7 +3709,7 @@ class API:
             def setName(handle: handle, name: str) -> list:
                 """
                 API: null Pixera.Resources.ResourceFolder.setName(string name)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.ResourceFolder.setName", ["handle", "name"], [handle, name], ())
 
@@ -3803,7 +3803,7 @@ class API:
                 "/my/new/folders", it will result in the following structure: "Media/my/new/folders".
 
                 API: null Pixera.Resources.ResourceFolder.createFoldersFrom(string path)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.ResourceFolder.createFoldersFrom", ["handle", "path"], [handle, path], ())
 
@@ -3813,7 +3813,7 @@ class API:
                 Reloads for all resources in folder the files from disk, distributes changed files and creates new preview.
 
                 API: null Pixera.Resources.ResourceFolder.refreshResources()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.ResourceFolder.refreshResources", ["handle"], [handle], ())
 
@@ -3823,7 +3823,7 @@ class API:
                 Reloads for all resources in folder the files from disk, distributes changed files and creates new preview.
 
                 API: null Pixera.Resources.ResourceFolder.moveResourceToThis(double id)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.ResourceFolder.moveResourceToThis", ["handle", "id"], [handle, id], ())
 
@@ -3831,7 +3831,7 @@ class API:
             def removeThis(handle: handle) -> list:
                 """
                 API: null Pixera.Resources.ResourceFolder.removeThis()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.ResourceFolder.removeThis", ["handle"], [handle], ())
 
@@ -3839,7 +3839,7 @@ class API:
             def removeThisIncludingAssets(handle: handle) -> list:
                 """
                 API: null Pixera.Resources.ResourceFolder.removeThisIncludingAssets()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.ResourceFolder.removeThisIncludingAssets", ["handle"], [handle], ())
 
@@ -3847,7 +3847,7 @@ class API:
             def removeAllContents(handle: handle) -> list:
                 """
                 API: null Pixera.Resources.ResourceFolder.removeAllContents()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.ResourceFolder.removeAllContents", ["handle"], [handle], ())
 
@@ -3855,7 +3855,7 @@ class API:
             def removeAllContentsIncludingAssets(handle: handle) -> list:
                 """
                 API: null Pixera.Resources.ResourceFolder.removeAllContentsIncludingAssets()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.ResourceFolder.removeAllContentsIncludingAssets", ["handle"], [handle], ())
 
@@ -3863,7 +3863,7 @@ class API:
             def deleteAllContentsAssetsFromLiveSystem(handle: handle, apEntityLiveSystemHandle: handle) -> list:
                 """
                 API: null Pixera.Resources.ResourceFolder.deleteAllContentsAssetsFromLiveSystem(handle apEntityLiveSystemHandle)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.ResourceFolder.deleteAllContentsAssetsFromLiveSystem", ["handle", "apEntityLiveSystemHandle"], [handle, apEntityLiveSystemHandle], ())
 
@@ -3873,7 +3873,7 @@ class API:
                 Resets distribution targets based on the file distribution settings and if needed distributes resource.
 
                 API: null Pixera.Resources.ResourceFolder.resetDistributionTargets()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.ResourceFolder.resetDistributionTargets", ["handle"], [handle], ())
 
@@ -3883,7 +3883,7 @@ class API:
                 Changes the state of a distribution target of a resource.
 
                 API: null Pixera.Resources.ResourceFolder.changeDistributionTarget(handle apEntityLiveSystemHandle, boolean shouldDistribute)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.ResourceFolder.changeDistributionTarget", ["handle", "apEntityLiveSystemHandle", "shouldDistribute"], [handle, apEntityLiveSystemHandle, shouldDistribute], ())
 
@@ -3891,7 +3891,7 @@ class API:
             def replaceResourcesByString(handle: handle, searchString: str, replaceString: str, path: str) -> list:
                 """
                 API: null Pixera.Resources.ResourceFolder.replaceResourcesByString(string searchString, string replaceString, string path)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.ResourceFolder.replaceResourcesByString", ["handle", "searchString", "replaceString", "path"], [handle, searchString, replaceString, path], ())
 
@@ -3942,7 +3942,7 @@ class API:
             def setDmxId(handle: handle, id: int) -> list:
                 """
                 API: null Pixera.Resources.ResourceFolder.setDmxId(int id)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.ResourceFolder.setDmxId", ["handle", "id"], [handle, id], ())
 
@@ -3952,7 +3952,7 @@ class API:
                 Distribute resources that are in this folder (can include resources in sub folders) to clients.
 
                 API: null Pixera.Resources.ResourceFolder.distributeResources(boolean includeSubFolders)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.ResourceFolder.distributeResources", ["handle", "includeSubFolders"], [handle, includeSubFolders], ())
 
@@ -3971,7 +3971,7 @@ class API:
             def setUsedTranscodingPreset(handle: handle, preset: str) -> list:
                 """
                 API: null Pixera.Resources.TranscodingFolder.setUsedTranscodingPreset(string preset)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.TranscodingFolder.setUsedTranscodingPreset", ["handle", "preset"], [handle, preset], ())
 
@@ -3987,7 +3987,7 @@ class API:
             def setTranscodeAutomatically(handle: handle, autoTranscode: bool) -> list:
                 """
                 API: null Pixera.Resources.TranscodingFolder.setTranscodeAutomatically(boolean autoTranscode)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.TranscodingFolder.setTranscodeAutomatically", ["handle", "autoTranscode"], [handle, autoTranscode], ())
 
@@ -4003,7 +4003,7 @@ class API:
             def setRxCacheAsDestination(handle: handle, useRxCache: bool) -> list:
                 """
                 API: null Pixera.Resources.TranscodingFolder.setRxCacheAsDestination(boolean useRxCache)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.TranscodingFolder.setRxCacheAsDestination", ["handle", "useRxCache"], [handle, useRxCache], ())
 
@@ -4019,7 +4019,7 @@ class API:
             def setDestinationDirectory(handle: handle, path: str) -> list:
                 """
                 API: null Pixera.Resources.TranscodingFolder.setDestinationDirectory(string path)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.TranscodingFolder.setDestinationDirectory", ["handle", "path"], [handle, path], ())
 
@@ -4042,7 +4042,7 @@ class API:
                 Removes the resource.
 
                 API: null Pixera.Resources.Resource.removeThis()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.removeThis", ["handle"], [handle], ())
 
@@ -4053,7 +4053,7 @@ class API:
                 on which they are stored.
 
                 API: null Pixera.Resources.Resource.deleteFilesOnSystems()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.deleteFilesOnSystems", ["handle"], [handle], ())
 
@@ -4064,7 +4064,7 @@ class API:
                 all systems on which they are stored.
 
                 API: null Pixera.Resources.Resource.removeThisIncludingAssets()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.removeThisIncludingAssets", ["handle"], [handle], ())
 
@@ -4074,7 +4074,7 @@ class API:
                 Permanently removes the asset from the given live system.
 
                 API: null Pixera.Resources.Resource.deleteAssetFromLiveSystem(handle apEntityLiveSystemHandle)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.deleteAssetFromLiveSystem", ["handle", "apEntityLiveSystemHandle"], [handle, apEntityLiveSystemHandle], ())
 
@@ -4084,7 +4084,7 @@ class API:
                 Resets distribution targets based on the file distribution settings and if needed distributes resource.
 
                 API: null Pixera.Resources.Resource.resetDistributionTargets()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.resetDistributionTargets", ["handle"], [handle], ())
 
@@ -4094,7 +4094,7 @@ class API:
                 Changes the state of a distribution target of a resource.
 
                 API: null Pixera.Resources.Resource.changeDistributionTarget(handle apEntityLiveSystemHandle, boolean shouldDistribute)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.changeDistributionTarget", ["handle", "apEntityLiveSystemHandle", "shouldDistribute"], [handle, apEntityLiveSystemHandle, shouldDistribute], ())
 
@@ -4110,7 +4110,7 @@ class API:
             def setName(handle: handle, name: str) -> list:
                 """
                 API: null Pixera.Resources.Resource.setName(string name)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.setName", ["handle", "name"], [handle, name], ())
 
@@ -4146,7 +4146,7 @@ class API:
                 Sets the active state of a Live Input Resource
 
                 API: null Pixera.Resources.Resource.setActive(boolean active)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.setActive", ["handle", "active"], [handle, active], ())
 
@@ -4177,7 +4177,7 @@ class API:
                 Set the Video Mode of a Live Input Resource by it's index.
 
                 API: null Pixera.Resources.Resource.setVideoStreamMode(int index)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.setVideoStreamMode", ["handle", "index"], [handle, index], ())
 
@@ -4216,7 +4216,7 @@ class API:
             def setCurrentVersion(handle: handle, version: str) -> list:
                 """
                 API: null Pixera.Resources.Resource.setCurrentVersion(string version)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.setCurrentVersion", ["handle", "version"], [handle, version], ())
 
@@ -4252,7 +4252,7 @@ class API:
                 get start suffex for versions
 
                 API: null Pixera.Resources.Resource.rescanVersions()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.rescanVersions", ["handle"], [handle], ())
 
@@ -4351,7 +4351,7 @@ class API:
                 Sets the text of a text input resource.
 
                 API: null Pixera.Resources.Resource.setText(string text)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.setText", ["handle", "text"], [handle, text], ())
 
@@ -4462,7 +4462,7 @@ class API:
                 Sets the url of a web browser resource.
 
                 API: null Pixera.Resources.Resource.setUrl(string url)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.setUrl", ["handle", "url"], [handle, url], ())
 
@@ -4482,7 +4482,7 @@ class API:
                 Sets the path to a color transformation file to be used with the resource. Deprecated. Use setColorTransformLutResource instead.
 
                 API: null Pixera.Resources.Resource.setColorTransformPath(string colorTransformPath)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.setColorTransformPath", ["handle", "colorTransformPath"], [handle, colorTransformPath], ())
 
@@ -4492,7 +4492,7 @@ class API:
                 Set color lut resource to use for color correction of this resource.
 
                 API: null Pixera.Resources.Resource.setColorTransformLutResource(string resourcePath)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.setColorTransformLutResource", ["handle", "resourcePath"], [handle, resourcePath], ())
 
@@ -4522,7 +4522,7 @@ class API:
                 Clear the path to a color transformation file.
 
                 API: null Pixera.Resources.Resource.clearColorTransformPath()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.clearColorTransformPath", ["handle"], [handle], ())
 
@@ -4532,7 +4532,7 @@ class API:
                 Reloads the file from disk, distributes changed files and creates new preview.
 
                 API: null Pixera.Resources.Resource.refresh(string text)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.refresh", ["handle", "text"], [handle, text], ())
 
@@ -4542,7 +4542,7 @@ class API:
                 Distribute the file to clients.
 
                 API: null Pixera.Resources.Resource.distribute()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.distribute", ["handle"], [handle], ())
 
@@ -4562,7 +4562,7 @@ class API:
                 Set the id used to access the resource through dmx.
 
                 API: null Pixera.Resources.Resource.setDmxId(int id)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.setDmxId", ["handle", "id"], [handle, id], ())
 
@@ -4572,7 +4572,7 @@ class API:
                 Remove multiresource item at index
 
                 API: null Pixera.Resources.Resource.removeMultiresourceIndex(int index)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.removeMultiresourceIndex", ["handle", "index"], [handle, index], ())
 
@@ -4582,7 +4582,7 @@ class API:
                 Add multiresource item
 
                 API: null Pixera.Resources.Resource.addMultiresourceItem(double id)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.addMultiresourceItem", ["handle", "id"], [handle, id], ())
 
@@ -4602,7 +4602,7 @@ class API:
                 replace multiresource item at index
 
                 API: null Pixera.Resources.Resource.replaceMultiresourceItemByIndex(int index, double id)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.replaceMultiresourceItemByIndex", ["handle", "index", "id"], [handle, index, id], ())
 
@@ -4612,7 +4612,7 @@ class API:
                 Set multiresource resolution
 
                 API: null Pixera.Resources.Resource.setMultiresourceResolution(int width, int height)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.setMultiresourceResolution", ["handle", "width", "height"], [handle, width, height], ())
 
@@ -4622,7 +4622,7 @@ class API:
                 Set multiresource items size. (1.0 = full)
 
                 API: null Pixera.Resources.Resource.setMultiresourceItemSizebyIndex(int index, double width, double height)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.setMultiresourceItemSizebyIndex", ["handle", "index", "width", "height"], [handle, index, width, height], ())
 
@@ -4632,7 +4632,7 @@ class API:
                 Set multiresource items position.
 
                 API: null Pixera.Resources.Resource.setMultiresourceItemPositionbyIndex(int index, double x, double y)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.setMultiresourceItemPositionbyIndex", ["handle", "index", "x", "y"], [handle, index, x, y], ())
 
@@ -4642,7 +4642,7 @@ class API:
                 Sets a color resource to show a gradient between its assigned colors.
 
                 API: null Pixera.Resources.Resource.setUseGradient(boolean useGradient)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.setUseGradient", ["handle", "useGradient"], [handle, useGradient], ())
 
@@ -4664,7 +4664,7 @@ class API:
                 where a << 24, r << 16, g << 8, b << 0.
 
                 API: null Pixera.Resources.Resource.setColors(uint[] argbCols, double[] positions, string[] colNames, optional<bool> useGradient)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.setColors", ["handle", "argbCols", "positions", "colNames", "useGradient"], [handle, argbCols, positions, colNames, useGradient], ("useGradient",))
 
@@ -4675,7 +4675,7 @@ class API:
                 If index does not exist the color will be appended to the end of the color list.
 
                 API: null Pixera.Resources.Resource.setColorAtIndex(int index, int red, int green, int blue, int alpha, double position, string name, optional<bool> useGradient)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.setColorAtIndex", ["handle", "index", "red", "green", "blue", "alpha", "position", "name", "useGradient"], [handle, index, red, green, blue, alpha, position, name, useGradient], ("useGradient",))
 
@@ -4705,7 +4705,7 @@ class API:
                 action = kill for kill
 
                 API: null Pixera.Resources.Resource.launchVirtualWorld(string action)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.launchVirtualWorld", ["handle", "action"], [handle, action], ())
 
@@ -4723,7 +4723,7 @@ class API:
                 Sets the restrict to specific services state and the list of IPs of the services.
 
                 API: null Pixera.Resources.Resource.setMultiResourceItemRestrictedServiceIps(int itemIndex, string[] ipAdresses)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.setMultiResourceItemRestrictedServiceIps", ["handle", "itemIndex", "ipAdresses"], [handle, itemIndex, ipAdresses], ())
 
@@ -4741,7 +4741,7 @@ class API:
             def replace(handle: handle, path: str) -> list:
                 """
                 API: null Pixera.Resources.Resource.replace(string path)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.replace", ["handle", "path"], [handle, path], ())
 
@@ -4751,7 +4751,7 @@ class API:
                 Sets whether compositing resource layers are created screen aligned or with transformation parameters.
 
                 API: null Pixera.Resources.Resource.setCompositingResourceCreateLayerScreenAligned(boolean createLayerScreenAligned)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.setCompositingResourceCreateLayerScreenAligned", ["handle", "createLayerScreenAligned"], [handle, createLayerScreenAligned], ())
 
@@ -4798,7 +4798,7 @@ class API:
                 serviceId is currently not used.
 
                 API: null Pixera.Resources.Resource.transcodeWithExisitngPreset(string presetName, boolean useRxCache, string destinationPath, int startFrame, int endFrame, uint serviceId)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.transcodeWithExisitngPreset", ["handle", "presetName", "useRxCache", "destinationPath", "startFrame", "endFrame", "serviceId"], [handle, presetName, useRxCache, destinationPath, startFrame, endFrame, serviceId], ())
 
@@ -4809,7 +4809,7 @@ class API:
                 in JSON format. See "Transcoding::addOrChangePreset" on how to build the JSON string
 
                 API: null Pixera.Resources.Resource.transcodeWithSettings(string settings, boolean useRxCache, string destinationPath, int startFrame, int endFrame, uint serviceId)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.transcodeWithSettings", ["handle", "settings", "useRxCache", "destinationPath", "startFrame", "endFrame", "serviceId"], [handle, settings, useRxCache, destinationPath, startFrame, endFrame, serviceId], ())
 
@@ -4817,7 +4817,7 @@ class API:
             def moveToTranscodingFolder(handle: handle, folderPath: str) -> list:
                 """
                 API: null Pixera.Resources.Resource.moveToTranscodingFolder(string folderPath)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.Resource.moveToTranscodingFolder", ["handle", "folderPath"], [handle, folderPath], ())
 
@@ -4828,7 +4828,7 @@ class API:
             def setProjectPath(handle: handle, projectPath: str) -> list:
                 """
                 API: null Pixera.Resources.UnrealWorld.setProjectPath(string projectPath)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.UnrealWorld.setProjectPath", ["handle", "projectPath"], [handle, projectPath], ())
 
@@ -4852,7 +4852,7 @@ class API:
             def loadLevel(handle: handle, levelName: str) -> list:
                 """
                 API: null Pixera.Resources.UnrealWorld.loadLevel(string levelName)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.UnrealWorld.loadLevel", ["handle", "levelName"], [handle, levelName], ())
 
@@ -4860,7 +4860,7 @@ class API:
             def setCustomArgumentState(handle: handle, customArgument: str, isActive: bool) -> list:
                 """
                 API: null Pixera.Resources.UnrealWorld.setCustomArgumentState(string customArgument, boolean isActive)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.UnrealWorld.setCustomArgumentState", ["handle", "customArgument", "isActive"], [handle, customArgument, isActive], ())
 
@@ -4876,7 +4876,7 @@ class API:
             def setCustomArguments(handle: handle, customArguments: List[str]) -> list:
                 """
                 API: null Pixera.Resources.UnrealWorld.setCustomArguments(string[] customArguments)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.UnrealWorld.setCustomArguments", ["handle", "customArguments"], [handle, customArguments], ())
 
@@ -4908,7 +4908,7 @@ class API:
             def setSyncFramesLatency(handle: handle, frames: int) -> list:
                 """
                 API: null Pixera.Resources.UnrealWorld.setSyncFramesLatency(int frames)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.UnrealWorld.setSyncFramesLatency", ["handle", "frames"], [handle, frames], ())
 
@@ -4924,7 +4924,7 @@ class API:
             def setUpdateInterval(handle: handle, interval: int) -> list:
                 """
                 API: null Pixera.Resources.UnrealWorld.setUpdateInterval(int interval)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.UnrealWorld.setUpdateInterval", ["handle", "interval"], [handle, interval], ())
 
@@ -4940,7 +4940,7 @@ class API:
             def setAlphaHandling(handle: handle, mode: int) -> list:
                 """
                 API: null Pixera.Resources.UnrealWorld.setAlphaHandling(int mode)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.UnrealWorld.setAlphaHandling", ["handle", "mode"], [handle, mode], ())
 
@@ -4964,7 +4964,7 @@ class API:
             def triggerEventByName(handle: handle, triggerName: str) -> list:
                 """
                 API: null Pixera.Resources.UnrealWorld.triggerEventByName(string triggerName)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.UnrealWorld.triggerEventByName", ["handle", "triggerName"], [handle, triggerName], ())
 
@@ -4972,7 +4972,7 @@ class API:
             def createNDisplayConfig(handle: handle) -> list:
                 """
                 API: null Pixera.Resources.UnrealWorld.createNDisplayConfig()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.UnrealWorld.createNDisplayConfig", ["handle"], [handle], ())
 
@@ -4980,7 +4980,7 @@ class API:
             def setLaunchParticipants(handle: handle, participantNames: List[str]) -> list:
                 """
                 API: null Pixera.Resources.UnrealWorld.setLaunchParticipants(string[] participantNames)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.UnrealWorld.setLaunchParticipants", ["handle", "participantNames"], [handle, participantNames], ())
 
@@ -4996,7 +4996,7 @@ class API:
             def runUnreal(handle: handle) -> list:
                 """
                 API: null Pixera.Resources.UnrealWorld.runUnreal()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.UnrealWorld.runUnreal", ["handle"], [handle], ())
 
@@ -5004,7 +5004,7 @@ class API:
             def killUnreal(handle: handle, byProcessIds: Optional[bool] = None) -> list:
                 """
                 API: null Pixera.Resources.UnrealWorld.killUnreal(optional<bool> byProcessIds)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.UnrealWorld.killUnreal", ["handle", "byProcessIds"], [handle, byProcessIds], ("byProcessIds",))
 
@@ -5012,7 +5012,7 @@ class API:
             def distributeProjectToClients(handle: handle, useIgnoreFile: bool) -> list:
                 """
                 API: null Pixera.Resources.UnrealWorld.distributeProjectToClients(boolean useIgnoreFile)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Resources.UnrealWorld.distributeProjectToClients", ["handle", "useIgnoreFile"], [handle, useIgnoreFile], ())
 
@@ -5160,7 +5160,7 @@ class API:
                 Removes the timeline.
 
                 API: null Pixera.Timelines.Timeline.removeThis()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.removeThis", ["handle"], [handle], ())
 
@@ -5180,7 +5180,7 @@ class API:
                 Select the timeline.
 
                 API: null Pixera.Timelines.Timeline.selectThis()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.selectThis", ["handle"], [handle], ())
 
@@ -5200,7 +5200,7 @@ class API:
                 Set zoom factor of the timeline.
 
                 API: null Pixera.Timelines.Timeline.setZoomFactor(double zoomFactor)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.setZoomFactor", ["handle", "zoomFactor"], [handle, zoomFactor], ())
 
@@ -5220,7 +5220,7 @@ class API:
                 Get vertical scroll offset of the timeline.
 
                 API: null Pixera.Timelines.Timeline.setVerticalScrollOffset(int offset)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.setVerticalScrollOffset", ["handle", "offset"], [handle, offset], ())
 
@@ -5240,7 +5240,7 @@ class API:
                 Get vertical scroll offset of the timeline.
 
                 API: null Pixera.Timelines.Timeline.setHorizontalScrollOffset(int offset)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.setHorizontalScrollOffset", ["handle", "offset"], [handle, offset], ())
 
@@ -5250,7 +5250,7 @@ class API:
                 Moves the timeline up or down in the render order, depending on whether moveDown is true.
 
                 API: null Pixera.Timelines.Timeline.moveInRenderOrder(boolean moveDown)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.moveInRenderOrder", ["handle", "moveDown"], [handle, moveDown], ())
 
@@ -5258,7 +5258,7 @@ class API:
             def setRenderOrder(handle: handle, index: int) -> list:
                 """
                 API: null Pixera.Timelines.Timeline.setRenderOrder(int index)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.setRenderOrder", ["handle", "index"], [handle, index], ())
 
@@ -5316,7 +5316,7 @@ class API:
                 Select Layer by index of the timeline.
 
                 API: null Pixera.Timelines.Timeline.selectLayerByIndex(int index)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.selectLayerByIndex", ["handle", "index"], [handle, index], ())
 
@@ -5326,7 +5326,7 @@ class API:
                 Select Layers of the timeline by Names.
 
                 API: null Pixera.Timelines.Timeline.selectLayerByNames(string[] layerNames)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.selectLayerByNames", ["handle", "layerNames"], [handle, layerNames], ())
 
@@ -5377,7 +5377,7 @@ class API:
                 Batch-remove clips as efficiently as possible.
 
                 API: null Pixera.Timelines.Timeline.removeClipsFromJsonString(string jsonString)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.removeClipsFromJsonString", ["handle", "jsonString"], [handle, jsonString], ())
 
@@ -5485,7 +5485,7 @@ class API:
                 blendDuration: optional parameter to set blend duration in seconds.
 
                 API: null Pixera.Timelines.Timeline.applyCueWithName(string name, optional<double> blendDuration)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.applyCueWithName", ["handle", "name", "blendDuration"], [handle, name, blendDuration], ("blendDuration",))
 
@@ -5498,7 +5498,7 @@ class API:
                 blendDuration: optional parameter to set blend duration in seconds.
 
                 API: null Pixera.Timelines.Timeline.applyCueWithNumber(int number, optional<double> blendDuration)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.applyCueWithNumber", ["handle", "number", "blendDuration"], [handle, number, blendDuration], ("blendDuration",))
 
@@ -5512,7 +5512,7 @@ class API:
                 blendDuration: optional parameter to set blend duration in seconds.
 
                 API: null Pixera.Timelines.Timeline.applyCueWithNumberComponents(int main, int sub, int detail, optional<double> blendDuration)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.applyCueWithNumberComponents", ["handle", "main", "sub", "detail", "blendDuration"], [handle, main, sub, detail, blendDuration], ("blendDuration",))
 
@@ -5524,7 +5524,7 @@ class API:
                 blendDuration: optional parameter to set blend duration in seconds.
 
                 API: null Pixera.Timelines.Timeline.applyCueWithNumberString(string numberStr, optional<double> blendDuration)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.applyCueWithNumberString", ["handle", "numberStr", "blendDuration"], [handle, numberStr, blendDuration], ("blendDuration",))
 
@@ -5553,7 +5553,7 @@ class API:
                 Removes all cues.
 
                 API: null Pixera.Timelines.Timeline.removeCues()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.removeCues", ["handle"], [handle], ())
 
@@ -5564,7 +5564,7 @@ class API:
                 If no Cue Layer is specified, the main cue layer of the timeline will be used.
 
                 API: null Pixera.Timelines.Timeline.createPauseCueBeforeSelectedClips(handle cueLayerHandle)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.createPauseCueBeforeSelectedClips", ["handle", "cueLayerHandle"], [handle, cueLayerHandle], ())
 
@@ -5574,7 +5574,7 @@ class API:
                 Starts the timeline at the current time.
 
                 API: null Pixera.Timelines.Timeline.play()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.play", ["handle"], [handle], ())
 
@@ -5584,7 +5584,7 @@ class API:
                 Pauses the timeline at the current time.
 
                 API: null Pixera.Timelines.Timeline.pause()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.pause", ["handle"], [handle], ())
 
@@ -5594,7 +5594,7 @@ class API:
                 Stops the timeline.
 
                 API: null Pixera.Timelines.Timeline.stop()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.stop", ["handle"], [handle], ())
 
@@ -5604,7 +5604,7 @@ class API:
                 Toggles the timeline transport mode between play and pause.
 
                 API: null Pixera.Timelines.Timeline.toggleTransport()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.toggleTransport", ["handle"], [handle], ())
 
@@ -5614,7 +5614,7 @@ class API:
                 Stores all domination values. I.e. events are created at the current time.
 
                 API: null Pixera.Timelines.Timeline.store()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.store", ["handle"], [handle], ())
 
@@ -5624,7 +5624,7 @@ class API:
                 Resets all domination values.
 
                 API: null Pixera.Timelines.Timeline.reset()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.reset", ["handle"], [handle], ())
 
@@ -5657,7 +5657,7 @@ class API:
                 time: Time in frames.
 
                 API: null Pixera.Timelines.Timeline.setCurrentTime(int time)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.setCurrentTime", ["handle", "time"], [handle, time], ())
 
@@ -5677,7 +5677,7 @@ class API:
                 Scrub frames up or down from current time.
 
                 API: null Pixera.Timelines.Timeline.scrubCurrentTime(int frames)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.scrubCurrentTime", ["handle", "frames"], [handle, frames], ())
 
@@ -5750,7 +5750,7 @@ class API:
                 Rename the timeline.
 
                 API: null Pixera.Timelines.Timeline.setName(string name)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.setName", ["handle", "name"], [handle, name], ())
 
@@ -5760,7 +5760,7 @@ class API:
                 Moves to next cue on timeline
 
                 API: null Pixera.Timelines.Timeline.moveToNextCue()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.moveToNextCue", ["handle"], [handle], ())
 
@@ -5770,7 +5770,7 @@ class API:
                 Moves to next cue on timeline and ignores cue properties.
 
                 API: null Pixera.Timelines.Timeline.moveToNextCueIgnoreProperties()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.moveToNextCueIgnoreProperties", ["handle"], [handle], ())
 
@@ -5790,7 +5790,7 @@ class API:
                 Moves to previous cue on timeline.
 
                 API: null Pixera.Timelines.Timeline.moveToPreviousCue()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.moveToPreviousCue", ["handle"], [handle], ())
 
@@ -5800,7 +5800,7 @@ class API:
                 Moves to previous cue on timeline and ignore cue properties
 
                 API: null Pixera.Timelines.Timeline.moveToPreviousCueIgnoreProperties()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.moveToPreviousCueIgnoreProperties", ["handle"], [handle], ())
 
@@ -5820,7 +5820,7 @@ class API:
                 Sets the next cue to be ignored when its reached.
 
                 API: null Pixera.Timelines.Timeline.ignoreNextCue()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.ignoreNextCue", ["handle"], [handle], ())
 
@@ -5834,7 +5834,7 @@ class API:
                 4: Jump
 
                 API: null Pixera.Timelines.Timeline.ignoreNextCueWithOperation(int cueOperation)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.ignoreNextCueWithOperation", ["handle", "cueOperation"], [handle, cueOperation], ())
 
@@ -5845,7 +5845,7 @@ class API:
                 if preloadDelayInMilliseconds is not set system fade to time delay is used
 
                 API: null Pixera.Timelines.Timeline.blendToTime(double goalTime, double blendDuration, optional<int> preloadDelayInMilliseconds)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.blendToTime", ["handle", "goalTime", "blendDuration", "preloadDelayInMilliseconds"], [handle, goalTime, blendDuration, preloadDelayInMilliseconds], ("preloadDelayInMilliseconds",))
 
@@ -5857,7 +5857,7 @@ class API:
                 if preloadDelayInMilliseconds is not set system fade to time delay is used
 
                 API: null Pixera.Timelines.Timeline.blendToTimeWithTransportMode(double goalTime, double blendDuration, int transportMode, optional<int> preloadDelayInMilliseconds)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.blendToTimeWithTransportMode", ["handle", "goalTime", "blendDuration", "transportMode", "preloadDelayInMilliseconds"], [handle, goalTime, blendDuration, transportMode, preloadDelayInMilliseconds], ("preloadDelayInMilliseconds",))
 
@@ -5881,7 +5881,7 @@ class API:
                 parameters of each layer.
 
                 API: null Pixera.Timelines.Timeline.setSpeedFactor(double factor)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.setSpeedFactor", ["handle", "factor"], [handle, factor], ())
 
@@ -5902,7 +5902,7 @@ class API:
                 value: opacity value between 0.0 and 1.0
 
                 API: null Pixera.Timelines.Timeline.setOpacity(double value)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.setOpacity", ["handle", "value"], [handle, value], ())
 
@@ -5926,7 +5926,7 @@ class API:
                 Time unit is frames.
 
                 API: null Pixera.Timelines.Timeline.startOpacityAnimation(boolean fadeIn, double fullFadeDuration)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.startOpacityAnimation", ["handle", "fadeIn", "fullFadeDuration"], [handle, fadeIn, fullFadeDuration], ())
 
@@ -5939,7 +5939,7 @@ class API:
                 2: Send
 
                 API: null Pixera.Timelines.Timeline.setSmpteMode(int mode)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.setSmpteMode", ["handle", "mode"], [handle, mode], ())
 
@@ -5959,7 +5959,7 @@ class API:
                 Stores recorded domination values using the current settings.
 
                 API: null Pixera.Timelines.Timeline.storeRecordedValues()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.storeRecordedValues", ["handle"], [handle], ())
 
@@ -5972,7 +5972,7 @@ class API:
                 3: Stop
 
                 API: null Pixera.Timelines.Timeline.setSmpteInputBehaviour(int mode)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.setSmpteInputBehaviour", ["handle", "mode"], [handle, mode], ())
 
@@ -5992,7 +5992,7 @@ class API:
                 Sets the SMPTE timecode offset.
 
                 API: null Pixera.Timelines.Timeline.setSmpteOffset(double time)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.setSmpteOffset", ["handle", "time"], [handle, time], ())
 
@@ -6012,7 +6012,7 @@ class API:
                 Clears the recorded domination values and resets the reference time.
 
                 API: null Pixera.Timelines.Timeline.resetRecordedValues()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.resetRecordedValues", ["handle"], [handle], ())
 
@@ -6031,7 +6031,7 @@ class API:
                 goalTime: Sets the preview nowpointer to the given time.
 
                 API: null Pixera.Timelines.Timeline.startPreviewEdit(double goalTime)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.startPreviewEdit", ["handle", "goalTime"], [handle, goalTime], ())
 
@@ -6043,7 +6043,7 @@ class API:
                 blendDurationInMs: Optional parameter to set blend duration in frames. If not set the time defined in settings is used.
 
                 API: null Pixera.Timelines.Timeline.endPreviewEdit(boolean moveToPreview, optional<int> blendDurationInMs)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.endPreviewEdit", ["handle", "moveToPreview", "blendDurationInMs"], [handle, moveToPreview, blendDurationInMs], ("blendDurationInMs",))
 
@@ -6056,7 +6056,7 @@ class API:
                 time: Time in frames.
 
                 API: null Pixera.Timelines.Timeline.setCurrentPreviewEditTime(int time)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.setCurrentPreviewEditTime", ["handle", "time"], [handle, time], ())
 
@@ -6068,7 +6068,7 @@ class API:
                 cueNumber: number of cue.
 
                 API: null Pixera.Timelines.Timeline.setCurrentPreviewEditTimeToCueTime(int cueNumber)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Timeline.setCurrentPreviewEditTimeToCueTime", ["handle", "cueNumber"], [handle, cueNumber], ())
 
@@ -6151,7 +6151,7 @@ class API:
                 Removes the layer.
 
                 API: null Pixera.Timelines.Layer.removeThis()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.removeThis", ["handle"], [handle], ())
 
@@ -6223,7 +6223,7 @@ class API:
                 Sets the name of the layer.
 
                 API: null Pixera.Timelines.Layer.setName(string name)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.setName", ["handle", "name"], [handle, name], ())
 
@@ -6245,7 +6245,7 @@ class API:
                 layer is determined by default values, keys and clips.
 
                 API: null Pixera.Timelines.Layer.resetLayer()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.resetLayer", ["handle"], [handle], ())
 
@@ -6265,7 +6265,7 @@ class API:
                 Set all parameter values as of the layer.
 
                 API: null Pixera.Timelines.Layer.setLayerJsonDescrip(string descrip, boolean makeAllDominant)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.setLayerJsonDescrip", ["handle", "descrip", "makeAllDominant"], [handle, descrip, makeAllDominant], ())
 
@@ -6281,7 +6281,7 @@ class API:
             def initFromJsonDescrip(handle: handle, descrip: str) -> list:
                 """
                 API: null Pixera.Timelines.Layer.initFromJsonDescrip(string descrip)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.initFromJsonDescrip", ["handle", "descrip"], [handle, descrip], ())
 
@@ -6291,7 +6291,7 @@ class API:
                 Sets the opacity of the layer.
 
                 API: null Pixera.Timelines.Layer.setOpacity(double value, optional<int> fadeTimeMs)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.setOpacity", ["handle", "value", "fadeTimeMs"], [handle, value, fadeTimeMs], ("fadeTimeMs",))
 
@@ -6311,7 +6311,7 @@ class API:
                 Resets the dominant opacity of the layer.
 
                 API: null Pixera.Timelines.Layer.resetOpacity()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.resetOpacity", ["handle"], [handle], ())
 
@@ -6321,7 +6321,7 @@ class API:
                 Sets the volume of the layer.
 
                 API: null Pixera.Timelines.Layer.setVolume(double value, optional<int> fadeTimeMs)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.setVolume", ["handle", "value", "fadeTimeMs"], [handle, value, fadeTimeMs], ("fadeTimeMs",))
 
@@ -6341,7 +6341,7 @@ class API:
                 Resets the dominant volume of the layer.
 
                 API: null Pixera.Timelines.Layer.resetVolume()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.resetVolume", ["handle"], [handle], ())
 
@@ -6351,7 +6351,7 @@ class API:
                 Mutes the layer.
 
                 API: null Pixera.Timelines.Layer.muteLayer()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.muteLayer", ["handle"], [handle], ())
 
@@ -6361,7 +6361,7 @@ class API:
                 Un-Mutes the layer.
 
                 API: null Pixera.Timelines.Layer.unMuteLayer()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.unMuteLayer", ["handle"], [handle], ())
 
@@ -6381,7 +6381,7 @@ class API:
                 Mutes the Audio.
 
                 API: null Pixera.Timelines.Layer.muteAudio()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.muteAudio", ["handle"], [handle], ())
 
@@ -6391,7 +6391,7 @@ class API:
                 Un-Mutes the Audio.
 
                 API: null Pixera.Timelines.Layer.unMuteAudio()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.unMuteAudio", ["handle"], [handle], ())
 
@@ -6432,7 +6432,7 @@ class API:
             def setDmxMuteState(handle: handle, muteState: uint) -> list:
                 """
                 API: null Pixera.Timelines.Layer.setDmxMuteState(uint muteState)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.setDmxMuteState", ["handle", "muteState"], [handle, muteState], ())
 
@@ -6440,7 +6440,7 @@ class API:
             def toggleExplicitMute(handle: handle, flag: uint) -> list:
                 """
                 API: null Pixera.Timelines.Layer.toggleExplicitMute(uint flag)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.toggleExplicitMute", ["handle", "flag"], [handle, flag], ())
 
@@ -6450,7 +6450,7 @@ class API:
                 Sets the mode and loop state of the layer's transport parameter.
 
                 API: null Pixera.Timelines.Layer.setTransport(int mode, boolean loop)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.setTransport", ["handle", "mode", "loop"], [handle, mode, loop], ())
 
@@ -6470,7 +6470,7 @@ class API:
                 Resets the dominant state of the layer's transport parameter.
 
                 API: null Pixera.Timelines.Layer.resetTransportMode()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.resetTransportMode", ["handle"], [handle], ())
 
@@ -6490,7 +6490,7 @@ class API:
                 Sets ping pong state of the layer's transport parameter.
 
                 API: null Pixera.Timelines.Layer.setTransportPingPong(boolean doPingPong)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.setTransportPingPong", ["handle", "doPingPong"], [handle, doPingPong], ())
 
@@ -6510,7 +6510,7 @@ class API:
                 Sets playback speed of the layer.
 
                 API: null Pixera.Timelines.Layer.setPlaybackSpeed(double speed)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.setPlaybackSpeed", ["handle", "speed"], [handle, speed], ())
 
@@ -6536,7 +6536,7 @@ class API:
                 independent of the clips in the layer.
 
                 API: null Pixera.Timelines.Layer.assignResource(double id)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.assignResource", ["handle", "id"], [handle, id], ())
 
@@ -6550,7 +6550,7 @@ class API:
                 fadeDuration is seconds. Only pass values >= 0. While 0 means 'no fade'.
 
                 API: null Pixera.Timelines.Layer.assignResourceWithFade(double id, double fadeDuration)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.assignResourceWithFade", ["handle", "id", "fadeDuration"], [handle, id, fadeDuration], ())
 
@@ -6572,7 +6572,7 @@ class API:
                 layer is determined by its clips.
 
                 API: null Pixera.Timelines.Layer.resetAssignedResource()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.resetAssignedResource", ["handle"], [handle], ())
 
@@ -6592,7 +6592,7 @@ class API:
                 Reset the resource currently assigned to the layer.
 
                 API: null Pixera.Timelines.Layer.resetAssignedModelResource()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.resetAssignedModelResource", ["handle"], [handle], ())
 
@@ -6613,7 +6613,7 @@ class API:
                 see API function Layer.assignResource(.). The unit of the value parameter is seconds.
 
                 API: null Pixera.Timelines.Layer.setFadeDurationDominantResourceChange(double value)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.setFadeDurationDominantResourceChange", ["handle", "value"], [handle, value], ())
 
@@ -6653,7 +6653,7 @@ class API:
             def controlClipBorder(handle: handle, clip: handle, isEnter: bool, isIncremental: bool, entryTime: float) -> list:
                 """
                 API: null Pixera.Timelines.Layer.controlClipBorder(handle clip, boolean isEnter, boolean isIncremental, double entryTime)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.controlClipBorder", ["handle", "clip", "isEnter", "isIncremental", "entryTime"], [handle, clip, isEnter, isIncremental, entryTime], ())
 
@@ -6703,7 +6703,7 @@ class API:
                 Removes all clips.
 
                 API: null Pixera.Timelines.Layer.removeClips()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.removeClips", ["handle"], [handle], ())
 
@@ -6713,7 +6713,7 @@ class API:
                 Sets the screen with name given as layer's home screen.
 
                 API: null Pixera.Timelines.Layer.setHomeScreenFromScreenName(string screenName)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.setHomeScreenFromScreenName", ["handle", "screenName"], [handle, screenName], ())
 
@@ -6739,7 +6739,7 @@ class API:
                 5: Used 3D Object (1:1)
 
                 API: null Pixera.Timelines.Layer.setScaleUnitMode(int mode)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.setScaleUnitMode", ["handle", "mode"], [handle, mode], ())
 
@@ -6763,7 +6763,7 @@ class API:
             def setRenderOnlyOnHomeScreen(handle: handle, onlyOnHomeScreen: bool) -> list:
                 """
                 API: null Pixera.Timelines.Layer.setRenderOnlyOnHomeScreen(boolean onlyOnHomeScreen)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.setRenderOnlyOnHomeScreen", ["handle", "onlyOnHomeScreen"], [handle, onlyOnHomeScreen], ())
 
@@ -6787,7 +6787,7 @@ class API:
                 3: Perspective Position
 
                 API: null Pixera.Timelines.Layer.setOrigin(int origin)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.setOrigin", ["handle", "origin"], [handle, origin], ())
 
@@ -6811,7 +6811,7 @@ class API:
                 Sets the screen group presence of the layer. ScreenGroups parameter contains the handles to the screen groups.
 
                 API: null Pixera.Timelines.Layer.setScreenGroupPresence(handle[] screenGroups)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.setScreenGroupPresence", ["handle", "screenGroups"], [handle, screenGroups], ())
 
@@ -6831,7 +6831,7 @@ class API:
                 Sets the screen group presence of the layer. ScreenGroupNames parameter contains the names of the screen groups.
 
                 API: null Pixera.Timelines.Layer.setScreenGroupPresenceByName(string[] screenGroupNames)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.setScreenGroupPresenceByName", ["handle", "screenGroupNames"], [handle, screenGroupNames], ())
 
@@ -6851,7 +6851,7 @@ class API:
                 Set the '2d Oriented Transformation' property of the layer.
 
                 API: null Pixera.Timelines.Layer.set2dOrientedTransformation(boolean use2dOriented)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.set2dOrientedTransformation", ["handle", "use2dOriented"], [handle, use2dOriented], ())
 
@@ -6871,7 +6871,7 @@ class API:
                 Set the blend mode of the layer by name.
 
                 API: null Pixera.Timelines.Layer.setBlendMode(string blendMode)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.setBlendMode", ["handle", "blendMode"], [handle, blendMode], ())
 
@@ -6892,7 +6892,7 @@ class API:
                 Use Pixera.Resources.Resource.getInst(resourcePath).getId() to get resource id.
 
                 API: null Pixera.Timelines.Layer.addEffectById(double id)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.addEffectById", ["handle", "id"], [handle, id], ())
 
@@ -6902,7 +6902,7 @@ class API:
                 Sets the 'preload permanently' status of the layer.
 
                 API: null Pixera.Timelines.Layer.setPreloadPermanently(boolean doPreloadPermanently)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.setPreloadPermanently", ["handle", "doPreloadPermanently"], [handle, doPreloadPermanently], ())
 
@@ -6922,7 +6922,7 @@ class API:
                 Sets the restrict to specific services state and the list of IPs of the services.
 
                 API: null Pixera.Timelines.Layer.setRestrictToServiceWithIps(boolean doRestrict, string[] ipAdresses)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.setRestrictToServiceWithIps", ["handle", "doRestrict", "ipAdresses"], [handle, doRestrict, ipAdresses], ())
 
@@ -6962,7 +6962,7 @@ class API:
                 Set offsets.
 
                 API: null Pixera.Timelines.Layer.setOffsets(optional<double> x, optional<double> y, optional<double> z, optional<double> xr, optional<double> yr, optional<double> zr, optional<double> xScale, optional<double> yScale, optional<double> zScale)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.setOffsets", ["handle", "x", "y", "z", "xr", "yr", "zr", "xScale", "yScale", "zScale"], [handle, x, y, z, xr, yr, zr, xScale, yScale, zScale], ("x", "y", "z", "xr", "yr", "zr", "xScale", "yScale", "zScale"))
 
@@ -6976,7 +6976,7 @@ class API:
                 typeIndex 2 = scale
 
                 API: null Pixera.Timelines.Layer.setCurrentValuesToOffset(int typeIndex, optional<bool> resetDominant, optional<bool> removeKeyframesClips)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.setCurrentValuesToOffset", ["handle", "typeIndex", "resetDominant", "removeKeyframesClips"], [handle, typeIndex, resetDominant, removeKeyframesClips], ("resetDominant", "removeKeyframesClips"))
 
@@ -6987,7 +6987,7 @@ class API:
                 to send the layer to the last you can use -1 as index
 
                 API: null Pixera.Timelines.Layer.setRenderOrder(int index)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.setRenderOrder", ["handle", "index"], [handle, index], ())
 
@@ -7027,7 +7027,7 @@ class API:
             def executeJavaScriptOnCurrentWebResource(handle: handle, script: str) -> list:
                 """
                 API: null Pixera.Timelines.Layer.executeJavaScriptOnCurrentWebResource(string script)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Layer.executeJavaScriptOnCurrentWebResource", ["handle", "script"], [handle, script], ())
 
@@ -7051,7 +7051,7 @@ class API:
                 Removes the clip.
 
                 API: null Pixera.Timelines.Clip.removeThis()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Clip.removeThis", ["handle"], [handle], ())
 
@@ -7069,7 +7069,7 @@ class API:
             def setTime(handle: handle, time: float) -> list:
                 """
                 API: null Pixera.Timelines.Clip.setTime(double time)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Clip.setTime", ["handle", "time"], [handle, time], ())
 
@@ -7085,7 +7085,7 @@ class API:
             def setDuration(handle: handle, duration: float) -> list:
                 """
                 API: null Pixera.Timelines.Clip.setDuration(double duration)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Clip.setDuration", ["handle", "duration"], [handle, duration], ())
 
@@ -7101,7 +7101,7 @@ class API:
             def setLabel(handle: handle, label: str) -> list:
                 """
                 API: null Pixera.Timelines.Clip.setLabel(string label)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Clip.setLabel", ["handle", "label"], [handle, label], ())
 
@@ -7145,7 +7145,7 @@ class API:
                 7: Loop ping pong
 
                 API: null Pixera.Timelines.Clip.setPlayMode(int playMode)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Clip.setPlayMode", ["handle", "playMode"], [handle, playMode], ())
 
@@ -7163,7 +7163,7 @@ class API:
             def setSpeed(handle: handle, speed: float) -> list:
                 """
                 API: null Pixera.Timelines.Clip.setSpeed(double speed)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Clip.setSpeed", ["handle", "speed"], [handle, speed], ())
 
@@ -7181,7 +7181,7 @@ class API:
             def setBlendFrames(handle: handle, doFrameblending: bool) -> list:
                 """
                 API: null Pixera.Timelines.Clip.setBlendFrames(boolean doFrameblending)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Clip.setBlendFrames", ["handle", "doFrameblending"], [handle, doFrameblending], ())
 
@@ -7199,7 +7199,7 @@ class API:
             def setInpoint(handle: handle, inpoint: float) -> list:
                 """
                 API: null Pixera.Timelines.Clip.setInpoint(double inpoint)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Clip.setInpoint", ["handle", "inpoint"], [handle, inpoint], ())
 
@@ -7217,7 +7217,7 @@ class API:
             def setOutpoint(handle: handle, inpoint: float) -> list:
                 """
                 API: null Pixera.Timelines.Clip.setOutpoint(double inpoint)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Clip.setOutpoint", ["handle", "inpoint"], [handle, inpoint], ())
 
@@ -7231,7 +7231,7 @@ class API:
                 setToResourceDuration is optional and true if not set
 
                 API: null Pixera.Timelines.Clip.assignResource(double resId, optional<bool> setToResourceDuration)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Clip.assignResource", ["handle", "resId", "setToResourceDuration"], [handle, resId, setToResourceDuration], ("setToResourceDuration",))
 
@@ -7263,7 +7263,7 @@ class API:
             def setToResourceDuration(handle: handle) -> list:
                 """
                 API: null Pixera.Timelines.Clip.setToResourceDuration()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Clip.setToResourceDuration", ["handle"], [handle], ())
 
@@ -7271,7 +7271,7 @@ class API:
             def setText(handle: handle, text: str) -> list:
                 """
                 API: null Pixera.Timelines.Clip.setText(string text)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Clip.setText", ["handle", "text"], [handle, text], ())
 
@@ -7293,7 +7293,7 @@ class API:
                 "key" (instead of "event") terminology.
 
                 API: null Pixera.Timelines.Clip.createEvent(string namePath, double time, double value)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Clip.createEvent", ["handle", "namePath", "time", "value"], [handle, namePath, time, value], ())
 
@@ -7307,7 +7307,7 @@ class API:
                 "key" (instead of "event") terminology.
 
                 API: null Pixera.Timelines.Clip.createEventInPixelSpace(string namePath, double time, double value)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Clip.createEventInPixelSpace", ["handle", "namePath", "time", "value"], [handle, namePath, time, value], ())
 
@@ -7321,7 +7321,7 @@ class API:
                 "key" (instead of "event") terminology.
 
                 API: null Pixera.Timelines.Clip.removeEvent(string namePath, double time)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Clip.removeEvent", ["handle", "namePath", "time"], [handle, namePath, time], ())
 
@@ -7343,7 +7343,7 @@ class API:
                 Set filepath to color correction look up table. Deprecated. Use setColorTransformLutResource instead.
 
                 API: null Pixera.Timelines.Clip.setColorTransformPath(string colorTransformPath)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Clip.setColorTransformPath", ["handle", "colorTransformPath"], [handle, colorTransformPath], ())
 
@@ -7353,7 +7353,7 @@ class API:
                 Set color lut resource to use for color correction of clip.
 
                 API: null Pixera.Timelines.Clip.setColorTransformLutResource(string resourcePath)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Clip.setColorTransformLutResource", ["handle", "resourcePath"], [handle, resourcePath], ())
 
@@ -7383,7 +7383,7 @@ class API:
                 Clear filepath to look up table and color lut resource.
 
                 API: null Pixera.Timelines.Clip.clearColorTransformPath()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Clip.clearColorTransformPath", ["handle"], [handle], ())
 
@@ -7436,7 +7436,7 @@ class API:
                 one invocation.
 
                 API: null Pixera.Timelines.Node.setValues(double[] values)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Node.setValues", ["handle", "values"], [handle, values], ())
 
@@ -7458,7 +7458,7 @@ class API:
                 Resets the dominant values of the children of the node in the timeline.
 
                 API: null Pixera.Timelines.Node.resetValues()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Node.resetValues", ["handle"], [handle], ())
 
@@ -7468,7 +7468,7 @@ class API:
                 Stores all node values in the Timeline.
 
                 API: null Pixera.Timelines.Node.storeValues()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Node.storeValues", ["handle"], [handle], ())
 
@@ -7476,7 +7476,7 @@ class API:
             def mute(handle: handle) -> list:
                 """
                 API: null Pixera.Timelines.Node.mute()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Node.mute", ["handle"], [handle], ())
 
@@ -7484,7 +7484,7 @@ class API:
             def unMute(handle: handle) -> list:
                 """
                 API: null Pixera.Timelines.Node.unMute()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Node.unMute", ["handle"], [handle], ())
 
@@ -7492,7 +7492,7 @@ class API:
             def toggleMute(handle: handle) -> list:
                 """
                 API: null Pixera.Timelines.Node.toggleMute()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Node.toggleMute", ["handle"], [handle], ())
 
@@ -7563,7 +7563,7 @@ class API:
                 set parameter value. can be double or string
 
                 API: null Pixera.Timelines.Param.setValue(timelineParamValue value, optional<int> fadeTimeMs)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Param.setValue", ["handle", "value", "fadeTimeMs"], [handle, value, fadeTimeMs], ("fadeTimeMs",))
 
@@ -7571,7 +7571,7 @@ class API:
             def setValueRelativ(handle: handle, value: float, fadeTimeMs: Optional[int] = None) -> list:
                 """
                 API: null Pixera.Timelines.Param.setValueRelativ(double value, optional<int> fadeTimeMs)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Param.setValueRelativ", ["handle", "value", "fadeTimeMs"], [handle, value, fadeTimeMs], ("fadeTimeMs",))
 
@@ -7589,7 +7589,7 @@ class API:
             def resetValue(handle: handle) -> list:
                 """
                 API: null Pixera.Timelines.Param.resetValue()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Param.resetValue", ["handle"], [handle], ())
 
@@ -7599,7 +7599,7 @@ class API:
                 Store parameter value in the Timeline.
 
                 API: null Pixera.Timelines.Param.storeValue()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Param.storeValue", ["handle"], [handle], ())
 
@@ -7609,7 +7609,7 @@ class API:
                 Store parameter value in the Timeline and remove other keys.
 
                 API: null Pixera.Timelines.Param.storeValueAndRemoveOther()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Param.storeValueAndRemoveOther", ["handle"], [handle], ())
 
@@ -7621,7 +7621,7 @@ class API:
                 inpoint and outpoint are in frames. Inpoint of zero is ignored at pause. Outpoint of zero is always ignored.
 
                 API: null Pixera.Timelines.Param.setTransportAttributes(int mode, double speed, boolean loop, int inpoint, int outpoint)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Param.setTransportAttributes", ["handle", "mode", "speed", "loop", "inpoint", "outpoint"], [handle, mode, speed, loop, inpoint, outpoint], ())
 
@@ -7639,7 +7639,7 @@ class API:
             def mute(handle: handle) -> list:
                 """
                 API: null Pixera.Timelines.Param.mute()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Param.mute", ["handle"], [handle], ())
 
@@ -7647,7 +7647,7 @@ class API:
             def unMute(handle: handle) -> list:
                 """
                 API: null Pixera.Timelines.Param.unMute()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Param.unMute", ["handle"], [handle], ())
 
@@ -7655,7 +7655,7 @@ class API:
             def toggleMute(handle: handle) -> list:
                 """
                 API: null Pixera.Timelines.Param.toggleMute()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Param.toggleMute", ["handle"], [handle], ())
 
@@ -7700,7 +7700,7 @@ class API:
                 Removes cue.
 
                 API: null Pixera.Timelines.Cue.removeThis()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Cue.removeThis", ["handle"], [handle], ())
 
@@ -7711,7 +7711,7 @@ class API:
                 blendDuration: optional parameter to set blend duration in seconds.
 
                 API: null Pixera.Timelines.Cue.apply(optional<double> blendDuration)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Cue.apply", ["handle", "blendDuration"], [handle, blendDuration], ("blendDuration",))
 
@@ -7722,7 +7722,7 @@ class API:
                 blendDuration: blend duration in seconds.
 
                 API: null Pixera.Timelines.Cue.blendToThis(double blendDuration)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Cue.blendToThis", ["handle", "blendDuration"], [handle, blendDuration], ())
 
@@ -7934,7 +7934,7 @@ class API:
                 Sets the main number of the cue.
 
                 API: null Pixera.Timelines.Cue.setNumber(int number)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Cue.setNumber", ["handle", "number"], [handle, number], ())
 
@@ -7947,7 +7947,7 @@ class API:
                 Detail
 
                 API: null Pixera.Timelines.Cue.setNumberWithComponents(int main, int sub, int detail)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Cue.setNumberWithComponents", ["handle", "main", "sub", "detail"], [handle, main, sub, detail], ())
 
@@ -7958,7 +7958,7 @@ class API:
                 Format: "Main.Sub.Detail"
 
                 API: null Pixera.Timelines.Cue.setNumberWithString(string numberStr)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Cue.setNumberWithString", ["handle", "numberStr"], [handle, numberStr], ())
 
@@ -8196,7 +8196,7 @@ class API:
                 idState: 'Active' = 1, 'Ignore' = 2, 'Ignore Once' = 3
 
                 API: null Pixera.Timelines.Cue.setActivity(int idState)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Cue.setActivity", ["handle", "idState"], [handle, idState], ())
 
@@ -8229,7 +8229,7 @@ class API:
                 commandData is the string to be executed.
 
                 API: null Pixera.Timelines.Cue.setCommand(string conveyorName, string commandData)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Cue.setCommand", ["handle", "conveyorName", "commandData"], [handle, conveyorName, commandData], ())
 
@@ -8239,7 +8239,7 @@ class API:
                 setColor
 
                 API: null Pixera.Timelines.Cue.setColor(int red, int green, int blue)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Timelines.Cue.setColor", ["handle", "red", "green", "blue"], [handle, red, green, blue], ())
 
@@ -8290,7 +8290,7 @@ class API:
             the marker positions. The markerIds matching the coordinates example are 1,2,3.
 
             API: null Pixera.Calibration.setMarkerPositions(double[] positions, int[] markerIds)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Calibration.setMarkerPositions", ["positions", "markerIds"], [positions, markerIds], ())
 
@@ -8301,7 +8301,7 @@ class API:
         def loadDeviceUi(devicePath: str) -> list:
             """
             API: null Pixera.WebViews.loadDeviceUi(string devicePath)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.WebViews.loadDeviceUi", ["devicePath"], [devicePath], ())
 
@@ -8309,7 +8309,7 @@ class API:
         def activatePreviousFunc() -> list:
             """
             API: null Pixera.WebViews.activatePreviousFunc()
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.WebViews.activatePreviousFunc", [], [], ())
 
@@ -8317,7 +8317,7 @@ class API:
         def activateNextFunc() -> list:
             """
             API: null Pixera.WebViews.activateNextFunc()
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.WebViews.activateNextFunc", [], [], ())
 
@@ -8333,7 +8333,7 @@ class API:
         def deviceActivated(devicePath: str, withSelection: bool) -> list:
             """
             API: null Pixera.WebViews.deviceActivated(string devicePath, boolean withSelection)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.WebViews.deviceActivated", ["devicePath", "withSelection"], [devicePath, withSelection], ())
 
@@ -8341,7 +8341,7 @@ class API:
         def funcActivated(funcPath: str, withSelection: bool) -> list:
             """
             API: null Pixera.WebViews.funcActivated(string funcPath, boolean withSelection)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.WebViews.funcActivated", ["funcPath", "withSelection"], [funcPath, withSelection], ())
 
@@ -8349,7 +8349,7 @@ class API:
         def setFuncBodyState(funcPath: str, state: str) -> list:
             """
             API: null Pixera.WebViews.setFuncBodyState(string funcPath, string state)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.WebViews.setFuncBodyState", ["funcPath", "state"], [funcPath, state], ())
 
@@ -8365,7 +8365,7 @@ class API:
         def setTag(tag: str, text: str) -> list:
             """
             API: null Pixera.WebViews.setTag(string tag, string text)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.WebViews.setTag", ["tag", "text"], [tag, text], ())
 
@@ -8373,7 +8373,7 @@ class API:
         def setEditorIsUsingBlocks(useBlocks: bool) -> list:
             """
             API: null Pixera.WebViews.setEditorIsUsingBlocks(boolean useBlocks)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.WebViews.setEditorIsUsingBlocks", ["useBlocks"], [useBlocks], ())
 
@@ -8387,7 +8387,7 @@ class API:
         def lockUi(password: str) -> list:
             """
             API: null Pixera.Ui.lockUi(string password)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Ui.lockUi", ["password"], [password], ())
 
@@ -8395,7 +8395,7 @@ class API:
         def unlockUi(password: str) -> list:
             """
             API: null Pixera.Ui.unlockUi(string password)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Ui.unlockUi", ["password"], [password], ())
 
@@ -8403,7 +8403,7 @@ class API:
         def toggleLockUi(password: str) -> list:
             """
             API: null Pixera.Ui.toggleLockUi(string password)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Ui.toggleLockUi", ["password"], [password], ())
 
@@ -8428,7 +8428,7 @@ class API:
             7 = Control
 
             API: null Pixera.Ui.setAppMode(int mode)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Ui.setAppMode", ["mode"], [mode], ())
 
@@ -8458,7 +8458,7 @@ class API:
             Get display Testpattern
 
             API: null Pixera.Ui.setDisplayTestpattern(boolean display)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Ui.setDisplayTestpattern", ["display"], [display], ())
 
@@ -8468,7 +8468,7 @@ class API:
             toggle the output freeze
 
             API: null Pixera.Ui.toggleOutputFreeze()
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Ui.toggleOutputFreeze", [], [], ())
 
@@ -8486,7 +8486,7 @@ class API:
         def setPreviewCameraAsJsonString(cameraFrustrumStateString: str) -> list:
             """
             API: null Pixera.Ui.setPreviewCameraAsJsonString(string cameraFrustrumStateString)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Ui.setPreviewCameraAsJsonString", ["cameraFrustrumStateString"], [cameraFrustrumStateString], ())
 
@@ -8494,7 +8494,7 @@ class API:
         def setDisableContentRendering(state: bool) -> list:
             """
             API: null Pixera.Ui.setDisableContentRendering(boolean state)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Ui.setDisableContentRendering", ["state"], [state], ())
 
@@ -8510,7 +8510,7 @@ class API:
         def setDisableWorkspaceRendering(state: bool) -> list:
             """
             API: null Pixera.Ui.setDisableWorkspaceRendering(boolean state)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Ui.setDisableWorkspaceRendering", ["state"], [state], ())
 
@@ -8531,7 +8531,7 @@ class API:
                 set current control page
 
                 API: null Pixera.Ui.Control.setControlPage(string pageName)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Ui.Control.setControlPage", ["pageName"], [pageName], ())
 
@@ -8564,7 +8564,7 @@ class API:
                 select the preview camera for the preview. first starts at 0
 
                 API: null Pixera.Ui.PreviewCamera.selectPreviewCameraByIndex(int index)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Ui.PreviewCamera.selectPreviewCameraByIndex", ["index"], [index], ())
 
@@ -8574,7 +8574,7 @@ class API:
                 select the preview camera by name
 
                 API: null Pixera.Ui.PreviewCamera.selectPreviewCameraByName(string name)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Ui.PreviewCamera.selectPreviewCameraByName", ["name"], [name], ())
 
@@ -8593,7 +8593,7 @@ class API:
             def clear(handle: handle) -> list:
                 """
                 API: null Pixera.Ui.ComboBox.clear()
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Ui.ComboBox.clear", ["handle"], [handle], ())
 
@@ -8601,7 +8601,7 @@ class API:
             def addItem(handle: handle, item: str, id: int) -> list:
                 """
                 API: null Pixera.Ui.ComboBox.addItem(string item, int id)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Ui.ComboBox.addItem", ["handle", "item", "id"], [handle, item, id], ())
 
@@ -8609,7 +8609,7 @@ class API:
             def setSelectedId(handle: handle, id: int) -> list:
                 """
                 API: null Pixera.Ui.ComboBox.setSelectedId(int id)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Ui.ComboBox.setSelectedId", ["handle", "id"], [handle, id], ())
 
@@ -8636,7 +8636,7 @@ class API:
             "studioCamera"
 
             API: null Pixera.Direct.setRegistered(handle[] hdls, int expectedFrequency, int dampingMs, string[] usageHints)
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Direct.setRegistered", ["hdls", "expectedFrequency", "dampingMs", "usageHints"], [hdls, expectedFrequency, dampingMs, usageHints], ())
 
@@ -8646,7 +8646,7 @@ class API:
             Updates the representation of all registered entities.
 
             API: null Pixera.Direct.reloadRegistered()
-            Pixera returns: None
+            Pixera returns: no value (PIXERA 26.1 replies with result 1)
             """
             return _request("Pixera.Direct.reloadRegistered", [], [], ())
 
@@ -8710,7 +8710,7 @@ class API:
             def setPosition(handle: handle, xPos: Optional[float] = None, yPos: Optional[float] = None, zPos: Optional[float] = None) -> list:
                 """
                 API: null Pixera.Direct.Projector.setPosition(optional<double> xPos, optional<double> yPos, optional<double> zPos)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Projector.setPosition", ["handle", "xPos", "yPos", "zPos"], [handle, xPos, yPos, zPos], ("xPos", "yPos", "zPos"))
 
@@ -8718,7 +8718,7 @@ class API:
             def setRotation(handle: handle, xRot: Optional[float] = None, yRot: Optional[float] = None, zRot: Optional[float] = None) -> list:
                 """
                 API: null Pixera.Direct.Projector.setRotation(optional<double> xRot, optional<double> yRot, optional<double> zRot)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Projector.setRotation", ["handle", "xRot", "yRot", "zRot"], [handle, xRot, yRot, zRot], ("xRot", "yRot", "zRot"))
 
@@ -8726,7 +8726,7 @@ class API:
             def setPosRot(handle: handle, xPos: Optional[float] = None, yPos: Optional[float] = None, zPos: Optional[float] = None, xRot: Optional[float] = None, yRot: Optional[float] = None, zRot: Optional[float] = None) -> list:
                 """
                 API: null Pixera.Direct.Projector.setPosRot(optional<double> xPos, optional<double> yPos, optional<double> zPos, optional<double> xRot, optional<double> yRot, optional<double> zRot)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Projector.setPosRot", ["handle", "xPos", "yPos", "zPos", "xRot", "yRot", "zRot"], [handle, xPos, yPos, zPos, xRot, yRot, zRot], ("xPos", "yPos", "zPos", "xRot", "yRot", "zRot"))
 
@@ -8739,7 +8739,7 @@ class API:
                 Sets the position in meters.
 
                 API: null Pixera.Direct.Screen.setPosition(optional<double> xPos, optional<double> yPos, optional<double> zPos)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Screen.setPosition", ["handle", "xPos", "yPos", "zPos"], [handle, xPos, yPos, zPos], ("xPos", "yPos", "zPos"))
 
@@ -8749,7 +8749,7 @@ class API:
                 Sets the rotation in degrees.
 
                 API: null Pixera.Direct.Screen.setRotation(optional<double> xRot, optional<double> yRot, optional<double> zRot)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Screen.setRotation", ["handle", "xRot", "yRot", "zRot"], [handle, xRot, yRot, zRot], ("xRot", "yRot", "zRot"))
 
@@ -8759,7 +8759,7 @@ class API:
                 Sets position and rotation in one API call.
 
                 API: null Pixera.Direct.Screen.setPosRot(optional<double> xPos, optional<double> yPos, optional<double> zPos, optional<double> xRot, optional<double> yRot, optional<double> zRot)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Screen.setPosRot", ["handle", "xPos", "yPos", "zPos", "xRot", "yRot", "zRot"], [handle, xPos, yPos, zPos, xRot, yRot, zRot], ("xPos", "yPos", "zPos", "xRot", "yRot", "zRot"))
 
@@ -8769,7 +8769,7 @@ class API:
                 Sets position, rotation and the perspective position for the first screen group in one API call.
 
                 API: null Pixera.Direct.Screen.setPosRotAndPerspectivePos(optional<double> xPos, optional<double> yPos, optional<double> zPos, optional<double> xRot, optional<double> yRot, optional<double> zRot, optional<double> perspXPos, optional<double> perspYPos, optional<double> perspZPos)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Screen.setPosRotAndPerspectivePos", ["handle", "xPos", "yPos", "zPos", "xRot", "yRot", "zRot", "perspXPos", "perspYPos", "perspZPos"], [handle, xPos, yPos, zPos, xRot, yRot, zRot, perspXPos, perspYPos, perspZPos], ("xPos", "yPos", "zPos", "xRot", "yRot", "zRot", "perspXPos", "perspYPos", "perspZPos"))
 
@@ -8779,7 +8779,7 @@ class API:
                 Sets position, rotation and scale in one API call.
 
                 API: null Pixera.Direct.Screen.setPosRotScale(optional<double> xPos, optional<double> yPos, optional<double> zPos, optional<double> xRot, optional<double> yRot, optional<double> zRot, optional<double> xScale, optional<double> yScale, optional<double> zScale)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Screen.setPosRotScale", ["handle", "xPos", "yPos", "zPos", "xRot", "yRot", "zRot", "xScale", "yScale", "zScale"], [handle, xPos, yPos, zPos, xRot, yRot, zRot, xScale, yScale, zScale], ("xPos", "yPos", "zPos", "xRot", "yRot", "zRot", "xScale", "yScale", "zScale"))
 
@@ -8795,7 +8795,7 @@ class API:
                 dampingPerspectiveMs: The damping time for the perspective transformation in milliseconds.
 
                 API: null Pixera.Direct.Screen.setPosWithPerspectiveFollowAndDamping(optional<double> xPos, optional<double> yPos, optional<double> zPos, optional<int> perspectiveFollowOverride, optional<int> dampingScreenMs, optional<int> dampingPerspectiveMs)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Screen.setPosWithPerspectiveFollowAndDamping", ["handle", "xPos", "yPos", "zPos", "perspectiveFollowOverride", "dampingScreenMs", "dampingPerspectiveMs"], [handle, xPos, yPos, zPos, perspectiveFollowOverride, dampingScreenMs, dampingPerspectiveMs], ("xPos", "yPos", "zPos", "perspectiveFollowOverride", "dampingScreenMs", "dampingPerspectiveMs"))
 
@@ -8806,7 +8806,7 @@ class API:
                 showing the number of messages and the minimum and maximum time between two messages for every second.
 
                 API: null Pixera.Direct.Screen.enableLogging(boolean enable)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Screen.enableLogging", ["handle", "enable"], [handle, enable], ())
 
@@ -8820,7 +8820,7 @@ class API:
                 E.g. layer-level offsets will not be taken into account and neither will resource-dependent scaling.
 
                 API: null Pixera.Direct.Param.setValue(double value)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Param.setValue", ["handle", "value"], [handle, value], ())
 
@@ -8831,7 +8831,7 @@ class API:
                 showing the number of messages and the minimum and maximum time between two messages for every second.
 
                 API: null Pixera.Direct.Param.enableLogging(boolean enable)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Param.enableLogging", ["handle", "enable"], [handle, enable], ())
 
@@ -8844,7 +8844,7 @@ class API:
                 Sets the position in meters.
 
                 API: null Pixera.Direct.Camera.setPosition(double xPos, double yPos, double zPos)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Camera.setPosition", ["handle", "xPos", "yPos", "zPos"], [handle, xPos, yPos, zPos], ())
 
@@ -8854,7 +8854,7 @@ class API:
                 Sets the euler rotation in degrees.
 
                 API: null Pixera.Direct.Camera.setRotation(double xRot, double yRot, double zRot)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Camera.setRotation", ["handle", "xRot", "yRot", "zRot"], [handle, xRot, yRot, zRot], ())
 
@@ -8864,7 +8864,7 @@ class API:
                 Sets the rotation in quaternions.
 
                 API: null Pixera.Direct.Camera.setRotationQuat(double xQuat, double yQuat, double zQuat, double wQuat)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Camera.setRotationQuat", ["handle", "xQuat", "yQuat", "zQuat", "wQuat"], [handle, xQuat, yQuat, zQuat, wQuat], ())
 
@@ -8874,7 +8874,7 @@ class API:
                 Sets the position in meters, rotation and fov in degrees.
 
                 API: null Pixera.Direct.Camera.setTransformation(double xPos, double yPos, double zPos, double xRot, double yRot, double zRot, double fov, double aspectRatio)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Camera.setTransformation", ["handle", "xPos", "yPos", "zPos", "xRot", "yRot", "zRot", "fov", "aspectRatio"], [handle, xPos, yPos, zPos, xRot, yRot, zRot, fov, aspectRatio], ())
 
@@ -8884,7 +8884,7 @@ class API:
                 Sets the position in meters, rotation in quaternions, fov in degrees.
 
                 API: null Pixera.Direct.Camera.setTransformationQuat(double xPos, double yPos, double zPos, double xQuat, double yQuat, double zQuat, double wQuat, double fov, double aspectRatio)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Camera.setTransformationQuat", ["handle", "xPos", "yPos", "zPos", "xQuat", "yQuat", "zQuat", "wQuat", "fov", "aspectRatio"], [handle, xPos, yPos, zPos, xQuat, yQuat, zQuat, wQuat, fov, aspectRatio], ())
 
@@ -8894,7 +8894,7 @@ class API:
                 Sets the position in meters, rotation and fov in degrees, centerX, centerX and panelWidth in millimeters.
 
                 API: null Pixera.Direct.Camera.setTransformationAndLensProps(double xPos, double yPos, double zPos, double xRot, double yRot, double zRot, double fov, double aspectRatio, double nearClip, double farClip, double aperture, double focus, double iris, double k1, double k2, double centerX, double centerY, double panelWidth)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Camera.setTransformationAndLensProps", ["handle", "xPos", "yPos", "zPos", "xRot", "yRot", "zRot", "fov", "aspectRatio", "nearClip", "farClip", "aperture", "focus", "iris", "k1", "k2", "centerX", "centerY", "panelWidth"], [handle, xPos, yPos, zPos, xRot, yRot, zRot, fov, aspectRatio, nearClip, farClip, aperture, focus, iris, k1, k2, centerX, centerY, panelWidth], ())
 
@@ -8904,7 +8904,7 @@ class API:
                 Sets the position in meters, rotation in quaternions, fov in degrees, centerX, centerX and panelWidth in millimeters.
 
                 API: null Pixera.Direct.Camera.setTransformationAndLensPropsQuat(double xPos, double yPos, double zPos, double xQuat, double yQuat, double zQuat, double wQuat, double fov, double aspectRatio, double nearClip, double farClip, double aperture, double focus, double iris, double k1, double k2, double centerX, double centerY, double panelWidth)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Camera.setTransformationAndLensPropsQuat", ["handle", "xPos", "yPos", "zPos", "xQuat", "yQuat", "zQuat", "wQuat", "fov", "aspectRatio", "nearClip", "farClip", "aperture", "focus", "iris", "k1", "k2", "centerX", "centerY", "panelWidth"], [handle, xPos, yPos, zPos, xQuat, yQuat, zQuat, wQuat, fov, aspectRatio, nearClip, farClip, aperture, focus, iris, k1, k2, centerX, centerY, panelWidth], ())
 
@@ -8914,7 +8914,7 @@ class API:
                 Sets the position in meters, rotation and fov in degrees, centerX, centerX and panelWidth in millimeters.
 
                 API: null Pixera.Direct.Camera.setTransformationAndLensPropsExt(double xPos, double yPos, double zPos, double xRot, double yRot, double zRot, double fov, double aspectRatio, double nearClip, double farClip, double aperture, double focus, double focalDistance, double zoom, double iris, double k1, double k2, double k3, double p1, double p2, double centerX, double centerY, double panelWidth, double overscan, optional<double> focalLength, optional<double> focalLengthDistorted)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Camera.setTransformationAndLensPropsExt", ["handle", "xPos", "yPos", "zPos", "xRot", "yRot", "zRot", "fov", "aspectRatio", "nearClip", "farClip", "aperture", "focus", "focalDistance", "zoom", "iris", "k1", "k2", "k3", "p1", "p2", "centerX", "centerY", "panelWidth", "overscan", "focalLength", "focalLengthDistorted"], [handle, xPos, yPos, zPos, xRot, yRot, zRot, fov, aspectRatio, nearClip, farClip, aperture, focus, focalDistance, zoom, iris, k1, k2, k3, p1, p2, centerX, centerY, panelWidth, overscan, focalLength, focalLengthDistorted], ("focalLength", "focalLengthDistorted"))
 
@@ -8924,7 +8924,7 @@ class API:
                 Sets the position in meters, rotation in quaternions, fov in degrees, centerX, centerX and panelWidth in millimeters.
 
                 API: null Pixera.Direct.Camera.setTransformationAndLensPropsExtQuat(double xPos, double yPos, double zPos, double xQuat, double yQuat, double zQuat, double wQuat, double fov, double aspectRatio, double nearClip, double farClip, double aperture, double focus, double focalDistance, double zoom, double iris, double k1, double k2, double k3, double p1, double p2, double centerX, double centerY, double panelWidth, double overscan, optional<double> focalLength, optional<double> focalLengthDistorted)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Camera.setTransformationAndLensPropsExtQuat", ["handle", "xPos", "yPos", "zPos", "xQuat", "yQuat", "zQuat", "wQuat", "fov", "aspectRatio", "nearClip", "farClip", "aperture", "focus", "focalDistance", "zoom", "iris", "k1", "k2", "k3", "p1", "p2", "centerX", "centerY", "panelWidth", "overscan", "focalLength", "focalLengthDistorted"], [handle, xPos, yPos, zPos, xQuat, yQuat, zQuat, wQuat, fov, aspectRatio, nearClip, farClip, aperture, focus, focalDistance, zoom, iris, k1, k2, k3, p1, p2, centerX, centerY, panelWidth, overscan, focalLength, focalLengthDistorted], ("focalLength", "focalLengthDistorted"))
 
@@ -8937,7 +8937,7 @@ class API:
                 Sets the position in meters, rotation and fov in degrees.
 
                 API: null Pixera.Direct.Perspective.setTransformation(double xPos, double yPos, double zPos, double xRot, double yRot, double zRot, double fov, double aspectRatio)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Perspective.setTransformation", ["handle", "xPos", "yPos", "zPos", "xRot", "yRot", "zRot", "fov", "aspectRatio"], [handle, xPos, yPos, zPos, xRot, yRot, zRot, fov, aspectRatio], ())
 
@@ -8947,7 +8947,7 @@ class API:
                 Sets the position in meters, rotation and fov in degrees.
 
                 API: null Pixera.Direct.Perspective.setTransformationAndLensProps(double xPos, double yPos, double zPos, double xRot, double yRot, double zRot, double fov, double aspectRatio, double nearClip, double farClip, double aperture, double focus, double iris, double k1, double k2, double centerX, double centerY, double panelWidth)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Perspective.setTransformationAndLensProps", ["handle", "xPos", "yPos", "zPos", "xRot", "yRot", "zRot", "fov", "aspectRatio", "nearClip", "farClip", "aperture", "focus", "iris", "k1", "k2", "centerX", "centerY", "panelWidth"], [handle, xPos, yPos, zPos, xRot, yRot, zRot, fov, aspectRatio, nearClip, farClip, aperture, focus, iris, k1, k2, centerX, centerY, panelWidth], ())
 
@@ -8955,7 +8955,7 @@ class API:
             def setGeneralizedPerspectivePosition(handle: handle, xPos: Optional[float] = None, yPos: Optional[float] = None, zPos: Optional[float] = None) -> list:
                 """
                 API: null Pixera.Direct.Perspective.setGeneralizedPerspectivePosition(optional<double> xPos, optional<double> yPos, optional<double> zPos)
-                Pixera returns: None
+                Pixera returns: no value (PIXERA 26.1 replies with result 1)
                 """
                 return _request("Pixera.Direct.Perspective.setGeneralizedPerspectivePosition", ["handle", "xPos", "yPos", "zPos"], [handle, xPos, yPos, zPos], ("xPos", "yPos", "zPos"))
 
